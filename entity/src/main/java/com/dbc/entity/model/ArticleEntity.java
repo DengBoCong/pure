@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "PURE_ARTICLE", schema = "pure", catalog = "")
+@Table(name = "pure_article", schema = "pure", catalog = "")
 public class ArticleEntity {
     private int id;
     private String content;
@@ -49,7 +49,7 @@ public class ArticleEntity {
     }
 
     @Basic
-    @Column(name = "subTitle")
+    @Column(name = "sub_title")
     public String getSubTitle() {
         return subTitle;
     }
@@ -59,7 +59,7 @@ public class ArticleEntity {
     }
 
     @Basic
-    @Column(name = "addTime")
+    @Column(name = "add_time")
     public int getAddTime() {
         return addTime;
     }
@@ -79,7 +79,7 @@ public class ArticleEntity {
     }
 
     @Basic
-    @Column(name = "userId")
+    @Column(name = "user_id")
     public int getUserId() {
         return userId;
     }
@@ -89,7 +89,7 @@ public class ArticleEntity {
     }
 
     @Basic
-    @Column(name = "readNum")
+    @Column(name = "read_num")
     public int getReadNum() {
         return readNum;
     }
@@ -99,7 +99,7 @@ public class ArticleEntity {
     }
 
     @Basic
-    @Column(name = "pickNum")
+    @Column(name = "pick_num")
     public int getPickNum() {
         return pickNum;
     }
@@ -109,7 +109,7 @@ public class ArticleEntity {
     }
 
     @Basic
-    @Column(name = "commentNum")
+    @Column(name = "comment_num")
     public int getCommentNum() {
         return commentNum;
     }
@@ -119,7 +119,7 @@ public class ArticleEntity {
     }
 
     @Basic
-    @Column(name = "modifyTime")
+    @Column(name = "modify_time")
     public int getModifyTime() {
         return modifyTime;
     }
