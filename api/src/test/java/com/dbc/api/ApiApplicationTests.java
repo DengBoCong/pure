@@ -1,4 +1,4 @@
-package com.dbc.provider;
+package com.dbc.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

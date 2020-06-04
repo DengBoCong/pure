@@ -6,10 +6,18 @@
   <session-factory>
     <property name="connection.url">jdbc:mysql://49.235.33.100:3306/pure</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-    <mapping class="com.dbc.entity.model.ArticleEntity"/>
-    <mapping class="com.dbc.entity.model.CommentEntity"/>
-    <mapping class="com.dbc.entity.model.ArticleEntity"/>
-    <!-- <property name="connection.username"/> -->
+      <mapping class="com.dbc.entity.entity.ArticleEntity"/>
+    <mapping class="com.dbc.entity.entity.CommentEntity"/>
+    <mapping class="com.dbc.entity.entity.ArticleEntity"/>
+      <mapping class="com.dbc.entity.entity.PureArticleEntity"/>
+      <mapping class="com.dbc.entity.entity.PureAccessEntity"/>
+      <mapping class="com.dbc.entity.entity.PureAccessUserEntity"/>
+      <mapping class="com.dbc.entity.entity.PureArticleTagEntity"/>
+      <mapping class="com.dbc.entity.entity.PureArticleTypeEntity"/>
+      <mapping class="com.dbc.entity.entity.PureLogEntity"/>
+      <mapping class="com.dbc.entity.entity.PurePhotoEntity"/>
+      <mapping class="com.dbc.entity.entity.PureUserEntity"/>
+      <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->
