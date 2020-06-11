@@ -1,4 +1,4 @@
-package com.dbc.entity;
+package com.dbc.Utils;
 
 import java.io.Serializable;
 
