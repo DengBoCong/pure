@@ -2,11 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16ef51a0-dbf5-442d-b5a2-27c7d1c75eaa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/dbc/ArticleApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/dbc/ArticleApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/com/dbc/ArticleApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/com/dbc/ArticleApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/dbc/ArticleApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/dbc/api/ArticleApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/MapMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/dbc/utils/MapMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/dbc/utils/BaseResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/com/dbc/ArticleApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTagRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/dbc/dao/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/dbc/dao/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureAccessEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureAccessEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureAccessUserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureAccessUserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleTypeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/req/ArticleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/req/ArticleModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/src/main/resources/hibernate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/resources/hibernate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/dbc/entity/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/target/classes/com/dbc/entity/model/req/ArticleModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/entity/target/classes/com/dbc/entity/model/req/ArticleModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleTypeService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,136 +89,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/ArticleApi.java">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/api/ArticleApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+            <state relative-caret-position="160">
+              <caret line="38" column="73" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/condition/ArticleCondition.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/UserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/Result.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/req/ArticleModel.java">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/api/ArticleTypeApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="454">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
-                <element signature="e#792#793#0" expanded="true" />
-                <element signature="e#820#821#0" expanded="true" />
-                <element signature="e#851#852#0" expanded="true" />
-                <element signature="e#881#882#0" expanded="true" />
-                <element signature="e#924#925#0" expanded="true" />
-                <element signature="e#962#963#0" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1029#1030#0" expanded="true" />
-                <element signature="e#1078#1079#0" expanded="true" />
-                <element signature="e#1122#1123#0" expanded="true" />
-                <element signature="e#1156#1157#0" expanded="true" />
-                <element signature="e#1186#1187#0" expanded="true" />
-                <element signature="e#1232#1233#0" expanded="true" />
-                <element signature="e#1270#1271#0" expanded="true" />
-                <element signature="e#1304#1305#0" expanded="true" />
-                <element signature="e#1337#1338#0" expanded="true" />
-                <element signature="e#1386#1387#0" expanded="true" />
-                <element signature="e#1430#1431#0" expanded="true" />
-                <element signature="e#1461#1462#0" expanded="true" />
-                <element signature="e#1491#1492#0" expanded="true" />
-                <element signature="e#1534#1535#0" expanded="true" />
-                <element signature="e#1572#1573#0" expanded="true" />
-                <element signature="e#1603#1604#0" expanded="true" />
-                <element signature="e#1633#1634#0" expanded="true" />
-                <element signature="e#1676#1677#0" expanded="true" />
-                <element signature="e#1714#1715#0" expanded="true" />
-                <element signature="e#1745#1746#0" expanded="true" />
-                <element signature="e#1774#1775#0" expanded="true" />
-                <element signature="e#1816#1817#0" expanded="true" />
-                <element signature="e#1852#1853#0" expanded="true" />
-                <element signature="e#1887#1888#0" expanded="true" />
-                <element signature="e#1918#1919#0" expanded="true" />
-                <element signature="e#1966#1967#0" expanded="true" />
-                <element signature="e#2006#2007#0" expanded="true" />
-                <element signature="e#2038#2039#0" expanded="true" />
-                <element signature="e#2066#2067#0" expanded="true" />
-                <element signature="e#2108#2109#0" expanded="true" />
-                <element signature="e#2142#2143#0" expanded="true" />
-                <element signature="e#2172#2173#0" expanded="true" />
-                <element signature="e#2201#2202#0" expanded="true" />
-                <element signature="e#2242#2243#0" expanded="true" />
-                <element signature="e#2278#2279#0" expanded="true" />
-                <element signature="e#2312#2313#0" expanded="true" />
-                <element signature="e#2342#2343#0" expanded="true" />
-                <element signature="e#2388#2389#0" expanded="true" />
-                <element signature="e#2426#2427#0" expanded="true" />
-                <element signature="e#2481#2482#0" expanded="true" />
-                <element signature="e#2511#2512#0" expanded="true" />
-                <element signature="e#2578#2579#0" expanded="true" />
-                <element signature="e#2616#2617#0" expanded="true" />
-                <element signature="e#2654#2655#0" expanded="true" />
-                <element signature="e#2688#2689#0" expanded="true" />
-                <element signature="e#2742#2743#0" expanded="true" />
-                <element signature="e#2788#2789#0" expanded="true" />
-                <element signature="e#2823#2824#0" expanded="true" />
-                <element signature="e#2857#2858#0" expanded="true" />
-                <element signature="e#2908#2909#0" expanded="true" />
-                <element signature="e#2954#2955#0" expanded="true" />
-                <element signature="e#3005#3006#0" expanded="true" />
-                <element signature="e#3032#3033#0" expanded="true" />
-                <element signature="e#3092#3093#0" expanded="true" />
-                <element signature="e#3124#3125#0" expanded="true" />
-                <element signature="e#3170#3171#0" expanded="true" />
-                <element signature="e#3209#3210#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleTypeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleTypeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/HelloController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,41 +160,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleTypeEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleTagEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/config/CorsConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/HelloController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="399">
+              <caret line="103" column="31" lean-forward="true" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -258,8 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/entity/src/test/java/com/dbc/entity/EntityApplicationTests.java" />
-        <option value="$PROJECT_DIR$/provider/pom.xml" />
         <option value="$PROJECT_DIR$/provider/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/provider/src/main/java/com/dbc/provider/HelloController.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/api/ApiApplication.java" />
@@ -270,13 +197,10 @@
         <option value="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/DataSourceConfig.java" />
         <option value="$PROJECT_DIR$/entity/pom.xml" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/api/pom.xml" />
         <option value="$PROJECT_DIR$/dao/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/entity/src/main/resources/hibernate.xml" />
         <option value="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/ArticleEntity.java" />
         <option value="$PROJECT_DIR$/api/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleRepository.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleService.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleServiceImpl.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/HelloController.java" />
@@ -290,16 +214,30 @@
         <option value="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/PureUserEntity.java" />
         <option value="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PurePhotoEntity.java" />
         <option value="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/ArticleModel.java" />
-        <option value="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/req/ArticleModel.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/config/CorsConfig.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTypeRepository.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTagRepository.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/SafeConverter.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/MapMessage.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/condition/CommonCondition.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/condition/ArticleCondition.java" />
         <option value="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/UserRepository.java" />
+        <option value="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/req/ArticleModel.java" />
+        <option value="$PROJECT_DIR$/api/src/main/resources/banner.txt" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/ArticleApi.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/BaseResult.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/api/pom.xml" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/utils/BaseResult.java" />
+        <option value="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleEntity.java" />
+        <option value="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTypeRepository.java" />
+        <option value="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTagRepository.java" />
+        <option value="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleRepository.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/api/ArticleApi.java" />
+        <option value="$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleTypeEntity.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleTypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleTypeService.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/utils/DateUtils.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/dbc/api/ArticleTypeApi.java" />
       </list>
     </option>
   </component>
@@ -340,8 +278,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -392,6 +328,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dbc" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pure" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pure" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dbc" type="462c0819:PsiDirectoryNode" />
               <item name="condition" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -402,7 +348,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dbc" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pure" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pure" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pure" type="b2602c69:ProjectViewProjectNode" />
@@ -562,6 +516,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -585,15 +541,17 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dbc.provider" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dbc.api" />
       <recent name="com.dbc" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.dbc.entity.model" />
+      <recent name="com.dbc.entity.entity" />
       <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.dbc.provider" />
+      <recent name="com.dbc.entity.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ll\Desktop\pure\api\src" />
@@ -638,12 +596,13 @@
       <workItem from="1591155725034" duration="8472000" />
       <workItem from="1591233984477" duration="18014000" />
       <workItem from="1591320345973" duration="7650000" />
-      <workItem from="1591870210815" duration="5358000" />
+      <workItem from="1591870210815" duration="5618000" />
+      <workItem from="1591927612721" duration="19742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82116000" />
+    <option name="totallyTimeSpent" value="102118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -656,9 +615,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7941681" visible="true" weight="0.15938166" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7944984" visible="true" weight="0.26705757" />
       <window_info id="Structure" order="1" sideWeight="0.50323623" side_tool="true" weight="0.25746268" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -666,16 +624,16 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50323623" side_tool="true" weight="0.25746268" />
       <window_info id="Web" order="7" sideWeight="0.50323623" side_tool="true" weight="0.25746268" />
-      <window_info id="Persistence" order="8" sideWeight="0.2058319" side_tool="true" visible="true" weight="0.15938166" />
+      <window_info id="Persistence" order="8" sideWeight="0.20550162" side_tool="true" visible="true" weight="0.26705757" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36767897" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36767897" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29826465" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3373102" />
@@ -689,7 +647,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.25159913" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.2185501" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.1609808" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -702,27 +660,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a88dd764-7edc-4add-b0ba-ef2a6fd20fc2/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://c7079730-1e87-4eb9-9858-3aeb6b467dd5/schema/pure/table/PURE_ARTICLE" />
-    <entry file="file://$PROJECT_DIR$/api/src/test/java/com/dbc/api/ApiApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c7079730-1e87-4eb9-9858-3aeb6b467dd5/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/Article.java" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a97c530b-679b-4cb4-921a-ad4e0e691498/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/618e9663-ce0b-4933-8d36-4660bda36a02/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="das://a97c530b-679b-4cb4-921a-ad4e0e691498/schema/pure/table/PURE_ARTICLE" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.6.RELEASE/spring-webmvc-5.2.6.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -777,28 +714,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/CommentEntity.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="113" column="31" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/ArticleEntity.java" />
-    <entry file="file://$PROJECT_DIR$/api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1900">
-          <caret line="100" column="33" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -820,13 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureAccessUserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureLogEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -838,13 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -931,47 +833,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTagRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="91" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleTagService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleTypeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -985,51 +850,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleTypeEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleTagEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/config/CorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/HelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/SafeConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/MapMessage.java">
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/SafeConverter.java" />
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/utils/MapMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
@@ -1058,10 +880,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleRepository.java">
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/condition/ArticleCondition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
+        <state relative-caret-position="38">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/resources/banner.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="68" lean-forward="true" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/Docket.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2185">
+          <caret line="165" column="132" selection-start-line="165" selection-start-column="132" selection-end-line="165" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/config/CorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1078,38 +955,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTypeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="114">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/Utils/Result.java">
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTagRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="114">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
           <folding>
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/condition/ArticleCondition.java">
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+        <state relative-caret-position="114">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/ArticleApi.java">
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+        <state relative-caret-position="285">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/utils/BaseResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleTagEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureAccessUserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/api/ArticleApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="38" column="73" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1118,76 +1056,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/model/req/ArticleModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="152">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1078#1079#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-            <element signature="e#1232#1233#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-            <element signature="e#1491#1492#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1676#1677#0" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1745#1746#0" expanded="true" />
-            <element signature="e#1774#1775#0" expanded="true" />
-            <element signature="e#1816#1817#0" expanded="true" />
-            <element signature="e#1852#1853#0" expanded="true" />
-            <element signature="e#1887#1888#0" expanded="true" />
-            <element signature="e#1918#1919#0" expanded="true" />
-            <element signature="e#1966#1967#0" expanded="true" />
-            <element signature="e#2006#2007#0" expanded="true" />
-            <element signature="e#2038#2039#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-            <element signature="e#2108#2109#0" expanded="true" />
-            <element signature="e#2142#2143#0" expanded="true" />
-            <element signature="e#2172#2173#0" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2242#2243#0" expanded="true" />
-            <element signature="e#2278#2279#0" expanded="true" />
-            <element signature="e#2312#2313#0" expanded="true" />
-            <element signature="e#2342#2343#0" expanded="true" />
-            <element signature="e#2388#2389#0" expanded="true" />
-            <element signature="e#2426#2427#0" expanded="true" />
-            <element signature="e#2481#2482#0" expanded="true" />
-            <element signature="e#2511#2512#0" expanded="true" />
-            <element signature="e#2578#2579#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2654#2655#0" expanded="true" />
-            <element signature="e#2688#2689#0" expanded="true" />
-            <element signature="e#2742#2743#0" expanded="true" />
-            <element signature="e#2788#2789#0" expanded="true" />
-            <element signature="e#2823#2824#0" expanded="true" />
-            <element signature="e#2857#2858#0" expanded="true" />
-            <element signature="e#2908#2909#0" expanded="true" />
-            <element signature="e#2954#2955#0" expanded="true" />
-            <element signature="e#3005#3006#0" expanded="true" />
-            <element signature="e#3032#3033#0" expanded="true" />
-            <element signature="e#3092#3093#0" expanded="true" />
-            <element signature="e#3124#3125#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
-            <element signature="e#3209#3210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/src/main/java/com/dbc/entity/entity/PureArticleTypeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="103" column="31" lean-forward="true" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleTypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleTypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/utils/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/dbc/api/ArticleTypeApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

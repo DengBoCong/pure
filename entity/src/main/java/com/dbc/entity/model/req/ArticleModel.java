@@ -7,7 +7,6 @@ import java.io.Serializable;
 import java.util.List;
 
 public class ArticleModel implements Serializable {
-    private int id;
     private int addTime;
     private int commentNum;
     private String content;
@@ -23,14 +22,6 @@ public class ArticleModel implements Serializable {
     private String articleFlag;
     private int publishTime;
     private List<PureArticleTagEntity> tags;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getAddTime() {
         return addTime;

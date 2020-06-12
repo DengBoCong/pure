@@ -17,6 +17,7 @@
       <mapping class="com.dbc.entity.entity.PureLogEntity"/>
       <mapping class="com.dbc.entity.entity.PurePhotoEntity"/>
       <mapping class="com.dbc.entity.entity.PureUserEntity"/>
+      <mapping class="com.dbc.entity.entity.PureArticleTypeJoinEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

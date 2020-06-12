@@ -10,10 +10,10 @@ public class PureArticleTypeEntity implements Serializable {
     private int id;
     private String name;
     private String description;
-    private int sort;
+    private byte sort;
     private int addTime;
     private int articleNum;
-    private byte status;
+    private boolean status;
     private String fontCover;
 
     @Id
@@ -48,11 +48,11 @@ public class PureArticleTypeEntity implements Serializable {
 
     @Basic
     @Column(name = "sort")
-    public int getSort() {
+    public byte getSort() {
         return sort;
     }
 
-    public void setSort(int sort) {
+    public void setSort(byte sort) {
         this.sort = sort;
     }
 
@@ -78,11 +78,11 @@ public class PureArticleTypeEntity implements Serializable {
 
     @Basic
     @Column(name = "status")
-    public byte getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 

@@ -19,7 +19,6 @@ public class PureArticleEntity implements Serializable {
     private String title;
     private int userId;
     private String summary;
-    private int classId;
     private String articleFlag;
     private int publishTime;
 
@@ -143,16 +142,6 @@ public class PureArticleEntity implements Serializable {
         this.summary = summary;
     }
 
-    @Basic
-    @Column(name = "class_id")
-    public int getClassId() {
-        return classId;
-    }
-
-    public void setClassId(int classId) {
-        this.classId = classId;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -166,7 +155,6 @@ public class PureArticleEntity implements Serializable {
                 readNum == that.readNum &&
                 status == that.status &&
                 userId == that.userId &&
-                classId == that.classId &&
                 Objects.equals(content, that.content) &&
                 Objects.equals(subTitle, that.subTitle) &&
                 Objects.equals(title, that.title) &&
@@ -175,7 +163,7 @@ public class PureArticleEntity implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, addTime, commentNum, content, modifyTime, pickNum, readNum, status, subTitle, title, userId, summary, classId);
+        return Objects.hash(id, addTime, commentNum, content, modifyTime, pickNum, readNum, status, subTitle, title, userId, summary);
     }
 
     @Basic

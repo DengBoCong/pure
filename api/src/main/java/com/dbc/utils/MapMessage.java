@@ -1,4 +1,4 @@
-package com.dbc.Utils;
+package com.dbc.utils;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
