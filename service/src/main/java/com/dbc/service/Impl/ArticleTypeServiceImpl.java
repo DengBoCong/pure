@@ -22,4 +22,9 @@ public class ArticleTypeServiceImpl implements ArticleTypeService {
     public PureArticleTypeEntity addOneEntity(PureArticleTypeEntity articleTypeEntity) {
         return articleTypeRepository.saveAndFlush(articleTypeEntity);
     }
+
+    @Override
+    public void deleteOneEntityById(int id) {
+        articleTypeRepository.deleteById(id);
+    }
 }

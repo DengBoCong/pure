@@ -7,9 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
-        <module name="dao" />
-        <module name="entity" />
         <module name="service" />
+        <module name="entity" />
+        <module name="dao" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,7 +27,7 @@
       <module name="dao" options="-parameters" />
       <module name="entity" options="-parameters" />
       <module name="provider" options="-parameters" />
-      <module name="pure" options="-parameters" />
+      <module name="pure" options="" />
       <module name="service" options="-parameters" />
     </option>
   </component>

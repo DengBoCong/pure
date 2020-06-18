@@ -4,6 +4,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 @ApiModel(description = "响应对象")
 public class BaseResult<T> implements Serializable {
@@ -12,6 +14,8 @@ public class BaseResult<T> implements Serializable {
     private static final int FAIL_CODE = 1;
     private static final int UNAUTHORIZED = 2;
     private static final String SUCCESS_MESSAGE = "成功";
+    private static final String FAIL_MESSAGE = "失败";
+    private static final String UNAUTHORIZED_MESSAGE = "未授权";
 
     @ApiModelProperty(value = "响应码", name = "code", required = true, example = "" + SUCCESS_CODE)
     private int code;
@@ -22,10 +26,14 @@ public class BaseResult<T> implements Serializable {
     @ApiModelProperty(value = "响应数据", name = "data")
     private T data;
 
+    @ApiModelProperty(value = "附加响应信息", name = "map")
+    private Map<String, Object> map;
+
     private BaseResult(int code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
+        this.map = new HashMap<>();
     }
 
     private BaseResult() {
@@ -48,11 +56,19 @@ public class BaseResult<T> implements Serializable {
         return new BaseResult<>(data);
     }
 
+    public static <T> BaseResult<T> fail() {
+        return new BaseResult<>(FAIL_CODE, FAIL_MESSAGE);
+    }
+
+    public static <T> BaseResult<T> unauthorized() {
+        return new BaseResult<>(UNAUTHORIZED, UNAUTHORIZED_MESSAGE);
+    }
+
     public static <T> BaseResult<T> failWithCodeAndMsg(int code, String msg) {
         return new BaseResult<>(code, msg, null);
     }
 
-    public static <T> BaseResult<T> buildWithParam(ResponseParam param){
+    public static <T> BaseResult<T> buildWithParam(ResponseParam param) {
         return new BaseResult<>(param.getCode(), param.getMsg(), null);
     }
 
@@ -78,6 +94,11 @@ public class BaseResult<T> implements Serializable {
 
     public void setData(T data) {
         this.data = data;
+    }
+
+    public BaseResult<T> setMap(String key, Object value) {
+        this.map.put(key, value);
+        return this;
     }
 
     public static class ResponseParam {

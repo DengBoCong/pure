@@ -7,4 +7,5 @@ import java.util.List;
 public interface ArticleTypeService {
     public List<PureArticleTypeEntity> findAll();
     public PureArticleTypeEntity addOneEntity(PureArticleTypeEntity articleTypeEntity);
+    public void deleteOneEntityById(int id);
 }
