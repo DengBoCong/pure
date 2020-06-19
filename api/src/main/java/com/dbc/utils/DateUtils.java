@@ -6,7 +6,9 @@ import org.slf4j.LoggerFactory;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
+import java.util.Random;
 
 public class DateUtils {
     private static Logger logger = LoggerFactory.getLogger(DateUtils.class);
@@ -28,6 +30,10 @@ public class DateUtils {
             logger.error("日期工具类错误：int数值转化为Date数值出错！");
         }
         return nowTimeDate;
+    }
+
+    public static String dateFolderStr(LocalDate date, String prefix) {
+        return prefix + "_" +date.getYear() + date.getMonthValue() + date.getDayOfMonth();
     }
 
 //    public static int LastWeekTime(){

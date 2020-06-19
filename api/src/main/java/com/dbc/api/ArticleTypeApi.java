@@ -42,7 +42,7 @@ public class ArticleTypeApi {
     })
     public BaseResult oneInsert(@RequestBody PureArticleTypeEntity articleTypeEntity) {
         articleTypeEntity.setAddTime(DateUtils.NewDateInt());
-        articleTypeEntity.setFontCover("http://");
+        articleTypeEntity.setFontCover(articleTypeEntity.getFontCover());
         try {
             articleTypeService.addOneEntity(articleTypeEntity);
         }catch (Exception e) {
@@ -53,6 +53,10 @@ public class ArticleTypeApi {
 
     @ApiOperation(value = "根据转过来的ID删除文章分类专栏")
     @PostMapping("/oneDelete")
+    @ApiResponses(value = {
+            @ApiResponse(code = 0, message = "删除成功"),
+            @ApiResponse(code = 1, message = "删除出现异常")
+    })
     public BaseResult oneDelete(int id) {
         try {
             articleTypeService.deleteOneEntityById(id);
