@@ -59,6 +59,6 @@ public class ArticleTypeApi {
         }catch (Exception e) {
             BaseResult.failWithCodeAndMsg(1, "删除出现异常");
         }
-        return BaseResult.success();
+        return BaseResult.successWithData(articleTypeService.findAll());
     }
 }
