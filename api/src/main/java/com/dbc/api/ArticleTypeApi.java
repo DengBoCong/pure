@@ -34,6 +34,14 @@ public class ArticleTypeApi {
         return BaseResult.successWithData(dataList);
     }
 
+    @ApiOperation(value = "根据分类的状态进行查询")
+    @PostMapping("/findTypeByStatus")
+    @ApiResponse(code = 0, message = "查询成功")
+    public BaseResult<List<PureArticleTypeEntity>> findArticleTypeByStatus(boolean status) {
+        System.out.println(status);
+        return BaseResult.successWithData(articleTypeService.findAllByStatus(status));
+    }
+
     @ApiOperation(value = "根据文章分类ID进行查询")
     @PostMapping("/findTypeById")
     @ApiResponse(code = 0, message = "查询成功，没有对应的值的话就为空")

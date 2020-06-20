@@ -1,18 +1,21 @@
 package com.dbc.api;
 
+import com.dbc.entity.entity.PureArticleTypeJoinEntity;
+import com.dbc.entity.model.ArticleTypeModel;
 import com.dbc.service.ArticleTypeService;
 import com.dbc.utils.BaseResult;
 import com.dbc.condition.ArticleCondition;
 import com.dbc.entity.entity.PureArticleEntity;
 import com.dbc.entity.entity.PureArticleTypeEntity;
-import com.dbc.entity.model.req.ArticleModel;
+import com.dbc.entity.model.ArticleAddModel;
 import com.dbc.service.ArticleService;
+import com.dbc.utils.DateUtils;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -22,9 +25,6 @@ public class ArticleApi {
 
     @Autowired
     private ArticleService articleService;
-
-    @Autowired
-    private ArticleTypeService articleTypeService;
 
     @GetMapping("/findArticle")
     public BaseResult<Object> findByCondition(ArticleCondition condition) {
@@ -39,11 +39,12 @@ public class ArticleApi {
     @PostMapping("/findArticleByTypeId")
     @ApiResponse(code = 0, message = "查询成功")
     public BaseResult<List<PureArticleEntity>> findArticleByTypeId(int typeId) {
-        return BaseResult.successWithData(articleService.findByTypeId(typeId));
+        List<PureArticleEntity> list = articleService.findByTypeId(typeId);
+        return BaseResult.successWithData(list).setMap("allCount", list.size());
     }
 
     @PostMapping("/oneInsert")
-    public BaseResult<PureArticleEntity> oneInsert(@RequestBody ArticleModel articleModel) {
+    public BaseResult<PureArticleEntity> oneInsert(@RequestBody ArticleAddModel articleModel) {
         System.out.println(articleModel.getAddTime());
         System.out.println(articleModel.getArticleFlag());
         System.out.println(articleModel.getClasses());

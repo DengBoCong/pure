@@ -1,14 +1,12 @@
-package com.dbc.entity.model.res;
+package com.dbc.entity.model;
 
 import com.dbc.entity.entity.PureArticleTagEntity;
 import com.dbc.entity.entity.PureArticleTypeEntity;
-import com.dbc.entity.entity.PureUserEntity;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class ArticleModel implements Serializable {
-    private int id;
+public class ArticleAddModel implements Serializable {
     private int addTime;
     private int commentNum;
     private String content;
@@ -18,20 +16,12 @@ public class ArticleModel implements Serializable {
     private byte status;
     private String subTitle;
     private String title;
-    private PureUserEntity user;
+    private int userId;
     private String summary;
     private List<PureArticleTypeEntity> classes;
     private String articleFlag;
     private int publishTime;
     private List<PureArticleTagEntity> tags;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getAddTime() {
         return addTime;
@@ -105,12 +95,12 @@ public class ArticleModel implements Serializable {
         this.title = title;
     }
 
-    public PureUserEntity getUser() {
-        return user;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser(PureUserEntity user) {
-        this.user = user;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getSummary() {

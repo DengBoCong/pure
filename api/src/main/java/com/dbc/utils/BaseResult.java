@@ -27,13 +27,13 @@ public class BaseResult<T> implements Serializable {
     private T data;
 
     @ApiModelProperty(value = "附加响应信息", name = "map")
-    private Map<String, Object> map;
+    private Object map;
 
     private BaseResult(int code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
-        this.map = new HashMap<>();
+        this.map = null;
     }
 
     private BaseResult() {
@@ -69,7 +69,7 @@ public class BaseResult<T> implements Serializable {
     }
 
     public static <T> BaseResult<T> buildWithParam(ResponseParam param) {
-        return new BaseResult<>(param.getCode(), param.getMsg(), null);
+        return new BaseResult<>(param.getCode(), param.getMsg());
     }
 
     public int getCode() {
@@ -96,8 +96,12 @@ public class BaseResult<T> implements Serializable {
         this.data = data;
     }
 
-    public BaseResult<T> setMap(String key, Object value) {
-        this.map.put(key, value);
+    public Object getMap() {
+        return map;
+    }
+
+    public BaseResult<T> setMap(String allCount, Object map) {
+        this.map = map;
         return this;
     }
 

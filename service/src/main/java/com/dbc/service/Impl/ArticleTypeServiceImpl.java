@@ -24,6 +24,11 @@ public class ArticleTypeServiceImpl implements ArticleTypeService {
     }
 
     @Override
+    public List<PureArticleTypeEntity> findAllByStatus(boolean status) {
+        return articleTypeRepository.findAllByStatus(status);
+    }
+
+    @Override
     public PureArticleTypeEntity addOneEntity(PureArticleTypeEntity articleTypeEntity) {
         return articleTypeRepository.saveAndFlush(articleTypeEntity);
     }
