@@ -35,6 +35,13 @@ public class ArticleApi {
         return result;
     }
 
+    @ApiOperation(value = "通过文章-分类连表的typeId查询文章，即同一类别的所有文章")
+    @PostMapping("/findArticleByTypeId")
+    @ApiResponse(code = 0, message = "查询成功")
+    public BaseResult<List<PureArticleEntity>> findArticleByTypeId(int typeId) {
+        return BaseResult.successWithData(articleService.findByTypeId(typeId));
+    }
+
     @PostMapping("/oneInsert")
     public BaseResult<PureArticleEntity> oneInsert(@RequestBody ArticleModel articleModel) {
         System.out.println(articleModel.getAddTime());

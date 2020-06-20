@@ -19,6 +19,11 @@ public class ArticleTypeServiceImpl implements ArticleTypeService {
     }
 
     @Override
+    public PureArticleTypeEntity findById(int id) {
+        return articleTypeRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public PureArticleTypeEntity addOneEntity(PureArticleTypeEntity articleTypeEntity) {
         return articleTypeRepository.saveAndFlush(articleTypeEntity);
     }

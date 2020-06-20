@@ -34,17 +34,41 @@ public class ArticleTypeApi {
         return BaseResult.successWithData(dataList);
     }
 
-    @ApiOperation(value = "文章分类专栏添加接口")
-    @PostMapping("/oneInsert")
+    @ApiOperation(value = "根据文章分类ID进行查询")
+    @PostMapping("/findTypeById")
+    @ApiResponse(code = 0, message = "查询成功，没有对应的值的话就为空")
+    public BaseResult<PureArticleTypeEntity> findArticleTypeById(int id) {
+        return BaseResult.successWithData(articleTypeService.findById(id));
+    }
+
+    @ApiOperation(value = "文章分类专栏添加以及更新接口")
+    @PostMapping("/oneInsertAndUpdate")
     @ApiResponses(value = {
             @ApiResponse(code = 0, message = "成功"),
             @ApiResponse(code = 1, message = "失败"),
+            @ApiResponse(code = 3, message = "接收到的数据为空")
     })
-    public BaseResult oneInsert(@RequestBody PureArticleTypeEntity articleTypeEntity) {
-        articleTypeEntity.setAddTime(DateUtils.NewDateInt());
-        articleTypeEntity.setFontCover(articleTypeEntity.getFontCover());
+    public BaseResult oneInsertAndUpdate(@RequestBody PureArticleTypeEntity articleTypeEntity) {
+        if (articleTypeEntity == null) return BaseResult.failWithCodeAndMsg(3, "请求传输数据为空");
+        PureArticleTypeEntity tmp = null;
+        if (articleTypeEntity.getId() != 0) {
+            tmp = articleTypeService.findById(articleTypeEntity.getId());
+            tmp.setStatus(articleTypeEntity.getStatus());
+            if (articleTypeEntity.getDescription() != null)
+                tmp.setDescription(articleTypeEntity.getDescription());
+            if (articleTypeEntity.getName() != null)
+                tmp.setName(articleTypeEntity.getName());
+            if (articleTypeEntity.getFontCover() != null) {
+                tmp.setFontCover(articleTypeEntity.getFontCover());
+            }
+            articleTypeService.addOneEntity(tmp);
+        }
+
+        tmp = articleTypeEntity;
+        tmp.setAddTime(DateUtils.NewDateInt());
+        tmp.setFontCover(articleTypeEntity.getFontCover());
         try {
-            articleTypeService.addOneEntity(articleTypeEntity);
+            articleTypeService.addOneEntity(tmp);
         }catch (Exception e) {
             return BaseResult.failWithCodeAndMsg(1, "请求处理出现异常");
         }
