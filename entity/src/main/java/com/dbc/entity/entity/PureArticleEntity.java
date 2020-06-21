@@ -23,6 +23,7 @@ public class PureArticleEntity implements Serializable {
     private int publishTime;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //这样才能返回数据库中的自增ID
     @Column(name = "id")
     public int getId() {
         return id;
@@ -184,5 +185,25 @@ public class PureArticleEntity implements Serializable {
 
     public void setPublishTime(int publishTime) {
         this.publishTime = publishTime;
+    }
+
+    @Override
+    public String toString() {
+        return "PureArticleEntity{" +
+                "id=" + id +
+                ", addTime=" + addTime +
+                ", commentNum=" + commentNum +
+                ", content='" + content + '\'' +
+                ", modifyTime=" + modifyTime +
+                ", pickNum=" + pickNum +
+                ", readNum=" + readNum +
+                ", status=" + status +
+                ", subTitle='" + subTitle + '\'' +
+                ", title='" + title + '\'' +
+                ", userId=" + userId +
+                ", summary='" + summary + '\'' +
+                ", articleFlag='" + articleFlag + '\'' +
+                ", publishTime=" + publishTime +
+                '}';
     }
 }

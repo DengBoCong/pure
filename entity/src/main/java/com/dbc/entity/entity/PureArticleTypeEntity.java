@@ -17,6 +17,7 @@ public class PureArticleTypeEntity implements Serializable {
     private String fontCover;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -114,5 +115,19 @@ public class PureArticleTypeEntity implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, description, sort, addTime, articleNum, status, fontCover);
+    }
+
+    @Override
+    public String toString() {
+        return "PureArticleTypeEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", sort=" + sort +
+                ", addTime=" + addTime +
+                ", articleNum=" + articleNum +
+                ", status=" + status +
+                ", fontCover='" + fontCover + '\'' +
+                '}';
     }
 }

@@ -1,7 +1,10 @@
 package com.dbc.api;
 
+import com.dbc.entity.entity.PureArticleTagEntity;
 import com.dbc.entity.entity.PureArticleTypeJoinEntity;
 import com.dbc.entity.model.ArticleTypeModel;
+import com.dbc.service.ArticleTagService;
+import com.dbc.service.ArticleTypeJoinService;
 import com.dbc.service.ArticleTypeService;
 import com.dbc.utils.BaseResult;
 import com.dbc.condition.ArticleCondition;
@@ -21,19 +24,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/article")
 public class ArticleApi {
-    private static BaseResult<Object> result;
-
     @Autowired
     private ArticleService articleService;
 
-    @GetMapping("/findArticle")
-    public BaseResult<Object> findByCondition(ArticleCondition condition) {
+    @Autowired
+    private ArticleTypeJoinService articleTypeJoinService;
 
-        result.setData(articleService.findAll());
-        result.setMsg("这是一条信息");
-
-        return result;
-    }
+    @Autowired
+    private ArticleTagService articleTagService;
 
     @ApiOperation(value = "通过文章-分类连表的typeId查询文章，即同一类别的所有文章")
     @PostMapping("/findArticleByTypeId")
@@ -43,21 +41,33 @@ public class ArticleApi {
         return BaseResult.successWithData(list).setMap("allCount", list.size());
     }
 
+    @ApiOperation(value = "通过文章相关信息进行添加文章接口")
     @PostMapping("/oneInsert")
+    @ApiResponse(code = 0, message = "添加成功")
     public BaseResult<PureArticleEntity> oneInsert(@RequestBody ArticleAddModel articleModel) {
-        System.out.println(articleModel.getAddTime());
-        System.out.println(articleModel.getArticleFlag());
-        System.out.println(articleModel.getClasses());
-        System.out.println(articleModel.getCommentNum());
-        System.out.println(articleModel.getModifyTime());
-        System.out.println(articleModel.getPublishTime());
-        System.out.println(articleModel.getSubTitle());
-        System.out.println(articleModel.getStatus());
-        System.out.println(articleModel.getTags());
-        System.out.println(articleModel.getSummary());
-        System.out.println(articleModel.getUserId());
-        System.out.println(articleModel.getContent());
-        System.out.println(articleModel.getTitle());
+        PureArticleEntity articleEntity = articleService.addOneEntity(articleModel.getArticleEntity());
+        List<PureArticleTypeJoinEntity> articleTypeJoinEntities = new ArrayList<>();
+        PureArticleTypeJoinEntity articleTypeJoinEntity = null;
+        for (PureArticleTypeEntity articleTypeEntity : articleModel.getClasses()) {
+            articleTypeJoinEntity = new PureArticleTypeJoinEntity();
+            articleTypeJoinEntity.setTypeId(articleTypeEntity.getId());
+            articleTypeJoinEntity.setArticleId(articleEntity.getId());
+            articleTypeJoinEntity.setAddTime(DateUtils.NewDateInt());
+            articleTypeJoinEntities.add(articleTypeJoinEntity);
+        }
+        articleTypeJoinService.allInsert(articleTypeJoinEntities);
+
+        List<PureArticleTagEntity> articleTagEntities = new ArrayList<>();
+        PureArticleTagEntity tmp = null;
+        for (PureArticleTagEntity articleTagEntity : articleModel.getTags()) {
+            tmp = new PureArticleTagEntity();
+            tmp.setAddTime(DateUtils.NewDateInt());
+            tmp.setArticleId(articleEntity.getId());
+            tmp.setContent(articleTagEntity.getContent());
+            articleTagEntities.add(tmp);
+        }
+        articleTagService.allInsert(articleTagEntities);
+
         return BaseResult.success();
     }
 }

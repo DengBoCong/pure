@@ -39,8 +39,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public Integer insertArticle(PureArticleEntity articleEntity) {
-        articleRepository.save(articleEntity);
-        return 0;
+    public PureArticleEntity addOneEntity(PureArticleEntity articleEntity) {
+        return articleRepository.saveAndFlush(articleEntity);
     }
 }
