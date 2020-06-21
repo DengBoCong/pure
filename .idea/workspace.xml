@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16ef51a0-dbf5-442d-b5a2-27c7d1c75eaa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a97c530b-679b-4cb4-921a-ad4e0e691498.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a97c530b-679b-4cb4-921a-ad4e0e691498.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/dbc/api/ArticleApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/dbc/api/ArticleApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/dbc/utils/BaseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/dbc/utils/BaseResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/com/dbc/api/ArticleApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/com/dbc/api/ArticleApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/dbc/dao/ArticleTagRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleTagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/ArticleTagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleTagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dbc/service/Impl/ArticleTagServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/dbc/service/Impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/dbc/service/Impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/dbc/service/Impl/ArticleTagServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/dbc/service/Impl/ArticleTagServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/src/main/resources/hibernate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/resources/hibernate.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,9 +112,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IntellijIdeaProject\pure\api\target\classes\static" />
-      <recent name="D:\IntellijIdeaProject\pure\api\src\main\resources\static" />
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.dbc.entity.entity" />
+      <recent name="" />
+      <recent name="com.dbc.entity.model" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.dbc.api" />
@@ -136,10 +129,9 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.dbc.provider" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.dbc.entity.entity" />
-      <recent name="" />
-      <recent name="com.dbc.entity.model" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IntellijIdeaProject\pure\api\target\classes\static" />
+      <recent name="D:\IntellijIdeaProject\pure\api\src\main\resources\static" />
     </key>
   </component>
   <component name="RunManager">
@@ -175,7 +167,7 @@
       <workItem from="1592532637324" duration="16926000" />
       <workItem from="1592566505753" duration="7710000" />
       <workItem from="1592616631170" duration="22757000" />
-      <workItem from="1592704846925" duration="11969000" />
+      <workItem from="1592704846925" duration="13982000" />
     </task>
     <servers />
   </component>
@@ -200,6 +192,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="34" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1592710012718" />
+    <state x="312" y="0" width="779" height="680" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog" timestamp="1592735190350">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="312" y="0" width="779" height="680" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog/0.0.1280.680@0.0.1280.680" timestamp="1592735190350" />
     <state x="290" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592647620536">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -256,10 +252,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="249" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1592733524904" />
-    <state x="144" y="0" key="SettingsEditor" timestamp="1592647450453">
+    <state x="144" y="0" key="SettingsEditor" timestamp="1592735128693">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1592647450453" />
+    <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1592735128693" />
     <state x="337" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1592705068634">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

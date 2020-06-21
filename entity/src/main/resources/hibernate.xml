@@ -5,8 +5,8 @@
 <hibernate-configuration>
   <session-factory>
     <property name="connection.url">jdbc:mysql://49.235.33.100:3306/pure</property>
-    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-      <mapping class="com.dbc.entity.entity.ArticleEntity"/>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <mapping class="com.dbc.entity.entity.ArticleEntity"/>
     <mapping class="com.dbc.entity.entity.CommentEntity"/>
     <mapping class="com.dbc.entity.entity.ArticleEntity"/>
       <mapping class="com.dbc.entity.entity.PureArticleEntity"/>
@@ -18,6 +18,8 @@
       <mapping class="com.dbc.entity.entity.PurePhotoEntity"/>
       <mapping class="com.dbc.entity.entity.PureUserEntity"/>
       <mapping class="com.dbc.entity.entity.PureArticleTypeJoinEntity"/>
+      <mapping class="com.dbc.entity.entity.PureAdvertiseEntity"/>
+      <mapping class="com.dbc.entity.entity.PureNoticeEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
