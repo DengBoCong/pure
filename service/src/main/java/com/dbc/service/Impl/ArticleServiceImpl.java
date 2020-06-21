@@ -26,6 +26,11 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    public PureArticleEntity findById(int articleId) {
+        return articleRepository.findById(articleId).orElse(null);
+    }
+
+    @Override
     public List<PureArticleEntity> findByTypeId(int typeId) {
         List<PureArticleTypeJoinEntity> list = articleTypeJoinRepository.findAllByTypeId(typeId);
         List<PureArticleEntity> resultList = new ArrayList<>();

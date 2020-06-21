@@ -33,12 +33,33 @@ public class ArticleApi {
     @Autowired
     private ArticleTagService articleTagService;
 
+    @Autowired
+    private ArticleTypeService articleTypeService;
+
     @ApiOperation(value = "通过文章-分类连表的typeId查询文章，即同一类别的所有文章")
     @PostMapping("/findArticleByTypeId")
     @ApiResponse(code = 0, message = "查询成功")
-    public BaseResult<List<PureArticleEntity>> findArticleByTypeId(int typeId) {
+    public BaseResult<List<ArticleAddModel>> findArticleByTypeId(int typeId) {
+        ArticleAddModel articleAddModel = null;
         List<PureArticleEntity> list = articleService.findByTypeId(typeId);
-        return BaseResult.successWithData(list).setMap("allCount", list.size());
+        List<ArticleAddModel> resultList = new ArrayList<>();
+        for (PureArticleEntity articleEntity : list) {
+            articleAddModel = new ArticleAddModel();
+            articleAddModel.setArticleEntity(articleEntity);
+            articleAddModel.setTags(articleTagService.findAllByArticleId(articleEntity.getId()));
+            resultList.add(articleAddModel);
+        }
+        return BaseResult.successWithData(resultList).setMap(list.size());
+    }
+
+    @ApiOperation(value = "通过文章ID进行查询")
+    @PostMapping("/findByArticleId")
+    @ApiResponse(code = 0, message = "查询成功")
+    public BaseResult<ArticleAddModel> findArticleByArticleId(int articleId) {
+        ArticleAddModel articleAddModel = new ArticleAddModel();
+        articleAddModel.setArticleEntity(articleService.findById(articleId));
+        articleAddModel.setTags(articleTagService.findAllByArticleId(articleId));
+        return BaseResult.successWithData(articleAddModel);
     }
 
     @ApiOperation(value = "通过文章相关信息进行添加文章接口")

@@ -17,4 +17,9 @@ public class ArticleTagServiceImpl implements ArticleTagService {
     public List<PureArticleTagEntity> allInsert(List<PureArticleTagEntity> list) {
         return articleTagRepository.saveAll(list);
     }
+
+    @Override
+    public List<PureArticleTagEntity> findAllByArticleId(int articleId) {
+        return articleTagRepository.findAllByArticleId(articleId);
+    }
 }

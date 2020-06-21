@@ -100,7 +100,7 @@ public class BaseResult<T> implements Serializable {
         return map;
     }
 
-    public BaseResult<T> setMap(String allCount, Object map) {
+    public BaseResult<T> setMap(Object map) {
         this.map = map;
         return this;
     }
