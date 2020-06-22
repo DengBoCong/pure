@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface NoticeRepository extends JpaRepository<PureNoticeEntity, Integer> {
-    public List<PureNoticeEntity> findByType(String type);
+    public PureNoticeEntity findByType(String type);
 }

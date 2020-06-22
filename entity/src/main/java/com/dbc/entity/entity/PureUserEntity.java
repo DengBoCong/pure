@@ -17,6 +17,11 @@ public class PureUserEntity implements Serializable {
     private int modifyTime;
     private byte status;
     private String avatar;
+    private String address;
+    private String description;
+    private String position;
+    private String flag;
+    private String feature;
 
     @Id
     @Column(name = "id")
@@ -138,5 +143,55 @@ public class PureUserEntity implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, nickName, account, password, sex, addTime, modifyTime, status, avatar);
+    }
+
+    @Basic
+    @Column(name = "address")
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Basic
+    @Column(name = "description")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Basic
+    @Column(name = "position")
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    @Basic
+    @Column(name = "flag")
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
+
+    @Basic
+    @Column(name = "feature")
+    public String getFeature() {
+        return feature;
+    }
+
+    public void setFeature(String feature) {
+        this.feature = feature;
     }
 }

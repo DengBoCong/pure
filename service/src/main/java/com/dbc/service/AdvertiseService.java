@@ -5,5 +5,5 @@ import com.dbc.entity.entity.PureAdvertiseEntity;
 import java.util.List;
 
 public interface AdvertiseService {
-    public PureAdvertiseEntity findAllByType(String type);
+    public List<PureAdvertiseEntity> findAllByType(String type);
 }
