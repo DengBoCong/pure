@@ -33,7 +33,7 @@ public class DateUtils {
     }
 
     public static String dateFolderStr(LocalDate date, String prefix) {
-        return prefix + "_" +date.getYear() + date.getMonthValue() + date.getDayOfMonth();
+        return prefix + "" + date.getYear() + date.getMonthValue() + date.getDayOfMonth();
     }
 
 //    public static int LastWeekTime(){

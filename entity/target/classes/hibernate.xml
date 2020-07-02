@@ -20,6 +20,7 @@
       <mapping class="com.dbc.entity.entity.PureArticleTypeJoinEntity"/>
       <mapping class="com.dbc.entity.entity.PureAdvertiseEntity"/>
       <mapping class="com.dbc.entity.entity.PureNoticeEntity"/>
+      <mapping class="com.dbc.entity.entity.PureRecordEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
