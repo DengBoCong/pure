@@ -50,4 +50,10 @@ public class UploadApi {
         photoService.oneInsert(photoEntity);
         return BaseResult.successWithData(URL_IMG + path + "/" + fileName + file.getOriginalFilename());
     }
+
+    public BaseResult<String> uploadUserAvatar(@RequestParam(name = "file") MultipartFile file) {
+        String realPath = "";
+        String path = "user";
+        return BaseResult.successWithData("hd");
+    }
 }

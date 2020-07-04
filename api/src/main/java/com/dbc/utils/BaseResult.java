@@ -13,9 +13,11 @@ public class BaseResult<T> implements Serializable {
     private static final int SUCCESS_CODE = 0;
     private static final int FAIL_CODE = 1;
     private static final int UNAUTHORIZED = 2;
+    private static final int RESULT_ISNULL_CODE = 3;
     private static final String SUCCESS_MESSAGE = "成功";
     private static final String FAIL_MESSAGE = "失败";
     private static final String UNAUTHORIZED_MESSAGE = "未授权";
+    private static final String RESULT_ISNULL_MESSAGE = "内容为空";
 
     @ApiModelProperty(value = "响应码", name = "code", required = true, example = "" + SUCCESS_CODE)
     private int code;
@@ -62,6 +64,10 @@ public class BaseResult<T> implements Serializable {
 
     public static <T> BaseResult<T> unauthorized() {
         return new BaseResult<>(UNAUTHORIZED, UNAUTHORIZED_MESSAGE);
+    }
+
+    public static <T> BaseResult<T> isNull() {
+        return new BaseResult<>(RESULT_ISNULL_CODE, RESULT_ISNULL_MESSAGE);
     }
 
     public static <T> BaseResult<T> failWithCodeAndMsg(int code, String msg) {

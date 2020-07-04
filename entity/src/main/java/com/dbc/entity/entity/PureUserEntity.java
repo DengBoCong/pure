@@ -22,8 +22,10 @@ public class PureUserEntity implements Serializable {
     private String position;
     private String flag;
     private String feature;
+    private String access;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -193,5 +195,15 @@ public class PureUserEntity implements Serializable {
 
     public void setFeature(String feature) {
         this.feature = feature;
+    }
+
+    @Basic
+    @Column(name = "access")
+    public String getAccess() {
+        return access;
+    }
+
+    public void setAccess(String access) {
+        this.access = access;
     }
 }
