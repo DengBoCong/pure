@@ -2,10 +2,13 @@ package com.dbc.api;
 
 import com.dbc.entity.entity.PureAccessEntity;
 import com.dbc.entity.entity.PureUserEntity;
+import com.dbc.entity.model.UserRecordModel;
+import com.dbc.service.UserRecordService;
 import com.dbc.service.UserService;
 import com.dbc.utils.BaseResult;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
