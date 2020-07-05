@@ -5,6 +5,7 @@ import com.dbc.service.PhotoService;
 import com.dbc.utils.BaseResult;
 import com.dbc.utils.DateUtils;
 import com.dbc.utils.PublicContant;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
@@ -55,5 +56,25 @@ public class UploadApi {
         String realPath = "";
         String path = "user";
         return BaseResult.successWithData("hd");
+    }
+
+    @ApiOperation(value = "上传个人简历的头像，返回头像的地址")
+    @PostMapping("/uploadRecordAvatar")
+    public BaseResult<String> uploadRecordAvatar(@RequestParam(name = "file") MultipartFile file) {
+        String path = "record";
+        String fileName = DateUtils.NewDateInt() + PublicContant.random() + "";
+        String realPath = "";
+        try {
+            realPath = ResourceUtils.getURL("classpath:").getPath() + "static/upload/img/" + path;
+            realPath = realPath.replace("/", "\\").substring(1, realPath.length());
+            PublicContant.createDir(realPath);
+            File file1 = new File(realPath, fileName + file.getOriginalFilename());
+            if (!file1.exists()) file1.mkdir();
+            file.transferTo(file1);
+        } catch (Exception e) {
+            return BaseResult.failWithCodeAndMsg(1, "服务器IO出错");
+        }
+
+        return BaseResult.successWithData(URL_IMG + path + "/" + fileName + file.getOriginalFilename());
     }
 }
