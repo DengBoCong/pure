@@ -8,9 +8,9 @@ import java.util.Objects;
 @Table(name = "pure_article_tag", schema = "pure", catalog = "")
 public class PureArticleTagEntity implements Serializable {
     private int id;
-    private String content;
     private int addTime;
     private int articleId;
+    private String content;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,16 +21,6 @@ public class PureArticleTagEntity implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name = "content")
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
     }
 
     @Basic
@@ -53,6 +43,16 @@ public class PureArticleTagEntity implements Serializable {
         this.articleId = articleId;
     }
 
+    @Basic
+    @Column(name = "content")
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -66,6 +66,6 @@ public class PureArticleTagEntity implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, content, addTime, articleId);
+        return Objects.hash(id, addTime, articleId, content);
     }
 }

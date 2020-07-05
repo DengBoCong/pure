@@ -13,8 +13,8 @@ public class PureUserRecordItemEntity implements Serializable {
     private int addTime;
     private int recordId;
     private String icon;
-    private byte sort;
-    private byte status;
+    private short sort;
+    private boolean status;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -79,21 +79,21 @@ public class PureUserRecordItemEntity implements Serializable {
 
     @Basic
     @Column(name = "sort")
-    public byte getSort() {
+    public short getSort() {
         return sort;
     }
 
-    public void setSort(byte sort) {
+    public void setSort(short sort) {
         this.sort = sort;
     }
 
     @Basic
     @Column(name = "status")
-    public byte getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 

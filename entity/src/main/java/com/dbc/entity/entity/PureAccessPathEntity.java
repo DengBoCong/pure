@@ -5,15 +5,17 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@Table(name = "pure_access_user", schema = "pure", catalog = "")
-public class PureAccessUserEntity implements Serializable {
+@Table(name = "pure_access_path", schema = "pure", catalog = "")
+public class PureAccessPathEntity implements Serializable {
     private int id;
-    private int userId;
     private String accessPath;
     private int addTime;
-    private byte sort;
+    private short sort;
+    private int accessId;
+    private String description;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -21,16 +23,6 @@ public class PureAccessUserEntity implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name = "user_id")
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 
     @Basic
@@ -55,28 +47,49 @@ public class PureAccessUserEntity implements Serializable {
 
     @Basic
     @Column(name = "sort")
-    public byte getSort() {
+    public short getSort() {
         return sort;
     }
 
-    public void setSort(byte sort) {
+    public void setSort(short sort) {
         this.sort = sort;
+    }
+
+    @Basic
+    @Column(name = "access_id")
+    public int getAccessId() {
+        return accessId;
+    }
+
+    public void setAccessId(int accessId) {
+        this.accessId = accessId;
+    }
+
+    @Basic
+    @Column(name = "description")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PureAccessUserEntity that = (PureAccessUserEntity) o;
+        PureAccessPathEntity that = (PureAccessPathEntity) o;
         return id == that.id &&
-                userId == that.userId &&
                 addTime == that.addTime &&
                 sort == that.sort &&
-                Objects.equals(accessPath, that.accessPath);
+                accessId == that.accessId &&
+                Objects.equals(accessPath, that.accessPath) &&
+                Objects.equals(description, that.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userId, accessPath, addTime, sort);
+        return Objects.hash(id, accessPath, addTime, sort, accessId, description);
     }
 }

@@ -87,6 +87,16 @@ public class PureUserRecordEntity implements Serializable {
         this.addTime = addTime;
     }
 
+    @Basic
+    @Column(name = "record_url")
+    public String getRecordUrl() {
+        return recordUrl;
+    }
+
+    public void setRecordUrl(String recordUrl) {
+        this.recordUrl = recordUrl;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -98,21 +108,12 @@ public class PureUserRecordEntity implements Serializable {
                 Objects.equals(avatar, that.avatar) &&
                 Objects.equals(slogan, that.slogan) &&
                 Objects.equals(description, that.description) &&
-                Objects.equals(title, that.title);
+                Objects.equals(title, that.title) &&
+                Objects.equals(recordUrl, that.recordUrl);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, avatar, slogan, description, title, userId, addTime);
-    }
-
-    @Basic
-    @Column(name = "record_url")
-    public String getRecordUrl() {
-        return recordUrl;
-    }
-
-    public void setRecordUrl(String recordUrl) {
-        this.recordUrl = recordUrl;
+        return Objects.hash(id, avatar, slogan, description, title, userId, addTime, recordUrl);
     }
 }

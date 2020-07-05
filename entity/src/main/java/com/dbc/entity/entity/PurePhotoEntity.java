@@ -8,14 +8,15 @@ import java.util.Objects;
 @Table(name = "pure_photo", schema = "pure", catalog = "")
 public class PurePhotoEntity implements Serializable {
     private int id;
-    private String url;
     private int addTime;
-    private int sort;
-    private String origin;
     private String description;
-    private byte status;
+    private String origin;
+    private int sort;
+    private short status;
+    private String url;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -23,16 +24,6 @@ public class PurePhotoEntity implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name = "url")
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 
     @Basic
@@ -46,13 +37,13 @@ public class PurePhotoEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "sort")
-    public int getSort() {
-        return sort;
+    @Column(name = "description")
+    public String getDescription() {
+        return description;
     }
 
-    public void setSort(int sort) {
-        this.sort = sort;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Basic
@@ -66,23 +57,33 @@ public class PurePhotoEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "description")
-    public String getDescription() {
-        return description;
+    @Column(name = "sort")
+    public int getSort() {
+        return sort;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setSort(int sort) {
+        this.sort = sort;
     }
 
     @Basic
     @Column(name = "status")
-    public byte getStatus() {
+    public short getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(short status) {
         this.status = status;
+    }
+
+    @Basic
+    @Column(name = "url")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     @Override
@@ -94,13 +95,13 @@ public class PurePhotoEntity implements Serializable {
                 addTime == that.addTime &&
                 sort == that.sort &&
                 status == that.status &&
-                Objects.equals(url, that.url) &&
+                Objects.equals(description, that.description) &&
                 Objects.equals(origin, that.origin) &&
-                Objects.equals(description, that.description);
+                Objects.equals(url, that.url);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, url, addTime, sort, origin, description, status);
+        return Objects.hash(id, addTime, description, origin, sort, status, url);
     }
 }

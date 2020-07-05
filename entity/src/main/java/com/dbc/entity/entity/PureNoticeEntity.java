@@ -8,15 +8,15 @@ import java.util.Objects;
 @Table(name = "pure_notice", schema = "pure", catalog = "")
 public class PureNoticeEntity implements Serializable {
     private int id;
-    private String title;
-    private String content;
-    private String url;
-    private String type;
-    private byte status;
     private int addTime;
-    private byte sort;
-    private String titleColor;
+    private String content;
     private String contentColor;
+    private short sort;
+    private short status;
+    private String title;
+    private String titleColor;
+    private String type;
+    private String url;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,13 +30,13 @@ public class PureNoticeEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "title")
-    public String getTitle() {
-        return title;
+    @Column(name = "add_time")
+    public int getAddTime() {
+        return addTime;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setAddTime(int addTime) {
+        this.addTime = addTime;
     }
 
     @Basic
@@ -50,53 +50,43 @@ public class PureNoticeEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "url")
-    public String getUrl() {
-        return url;
+    @Column(name = "content_color")
+    public String getContentColor() {
+        return contentColor;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    @Basic
-    @Column(name = "type")
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    @Basic
-    @Column(name = "status")
-    public byte getStatus() {
-        return status;
-    }
-
-    public void setStatus(byte status) {
-        this.status = status;
-    }
-
-    @Basic
-    @Column(name = "add_time")
-    public int getAddTime() {
-        return addTime;
-    }
-
-    public void setAddTime(int addTime) {
-        this.addTime = addTime;
+    public void setContentColor(String contentColor) {
+        this.contentColor = contentColor;
     }
 
     @Basic
     @Column(name = "sort")
-    public byte getSort() {
+    public short getSort() {
         return sort;
     }
 
-    public void setSort(byte sort) {
+    public void setSort(short sort) {
         this.sort = sort;
+    }
+
+    @Basic
+    @Column(name = "status")
+    public short getStatus() {
+        return status;
+    }
+
+    public void setStatus(short status) {
+        this.status = status;
+    }
+
+    @Basic
+    @Column(name = "title")
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Basic
@@ -110,13 +100,23 @@ public class PureNoticeEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "content_color")
-    public String getContentColor() {
-        return contentColor;
+    @Column(name = "type")
+    public String getType() {
+        return type;
     }
 
-    public void setContentColor(String contentColor) {
-        this.contentColor = contentColor;
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Basic
+    @Column(name = "url")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     @Override
@@ -125,19 +125,19 @@ public class PureNoticeEntity implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         PureNoticeEntity that = (PureNoticeEntity) o;
         return id == that.id &&
-                status == that.status &&
                 addTime == that.addTime &&
                 sort == that.sort &&
-                Objects.equals(title, that.title) &&
+                status == that.status &&
                 Objects.equals(content, that.content) &&
-                Objects.equals(url, that.url) &&
-                Objects.equals(type, that.type) &&
+                Objects.equals(contentColor, that.contentColor) &&
+                Objects.equals(title, that.title) &&
                 Objects.equals(titleColor, that.titleColor) &&
-                Objects.equals(contentColor, that.contentColor);
+                Objects.equals(type, that.type) &&
+                Objects.equals(url, that.url);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, content, url, type, status, addTime, sort, titleColor, contentColor);
+        return Objects.hash(id, addTime, content, contentColor, sort, status, title, titleColor, type, url);
     }
 }

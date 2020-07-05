@@ -8,11 +8,11 @@ import java.util.Objects;
 @Table(name = "pure_record", schema = "pure", catalog = "")
 public class PureRecordEntity implements Serializable {
     private int id;
-    private String title;
-    private String content;
     private int addTime;
-    private byte sort;
+    private String content;
     private String flag;
+    private short sort;
+    private String title;
     private int userId;
 
     @Id
@@ -27,13 +27,13 @@ public class PureRecordEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "title")
-    public String getTitle() {
-        return title;
+    @Column(name = "add_time")
+    public int getAddTime() {
+        return addTime;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setAddTime(int addTime) {
+        this.addTime = addTime;
     }
 
     @Basic
@@ -47,26 +47,6 @@ public class PureRecordEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "add_time")
-    public int getAddTime() {
-        return addTime;
-    }
-
-    public void setAddTime(int addTime) {
-        this.addTime = addTime;
-    }
-
-    @Basic
-    @Column(name = "sort")
-    public byte getSort() {
-        return sort;
-    }
-
-    public void setSort(byte sort) {
-        this.sort = sort;
-    }
-
-    @Basic
     @Column(name = "flag")
     public String getFlag() {
         return flag;
@@ -76,22 +56,24 @@ public class PureRecordEntity implements Serializable {
         this.flag = flag;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        PureRecordEntity that = (PureRecordEntity) o;
-        return id == that.id &&
-                addTime == that.addTime &&
-                sort == that.sort &&
-                Objects.equals(title, that.title) &&
-                Objects.equals(content, that.content) &&
-                Objects.equals(flag, that.flag);
+    @Basic
+    @Column(name = "sort")
+    public short getSort() {
+        return sort;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, title, content, addTime, sort, flag);
+    public void setSort(short sort) {
+        this.sort = sort;
+    }
+
+    @Basic
+    @Column(name = "title")
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Basic
@@ -102,5 +84,24 @@ public class PureRecordEntity implements Serializable {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PureRecordEntity that = (PureRecordEntity) o;
+        return id == that.id &&
+                addTime == that.addTime &&
+                sort == that.sort &&
+                userId == that.userId &&
+                Objects.equals(content, that.content) &&
+                Objects.equals(flag, that.flag) &&
+                Objects.equals(title, that.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, addTime, content, flag, sort, title, userId);
     }
 }

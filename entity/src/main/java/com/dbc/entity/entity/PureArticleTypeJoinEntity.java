@@ -1,15 +1,16 @@
 package com.dbc.entity.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "pure_article_type_join", schema = "pure", catalog = "")
-public class PureArticleTypeJoinEntity {
+public class PureArticleTypeJoinEntity implements Serializable {
     private int id;
-    private int typeId;
-    private int articleId;
     private int addTime;
+    private int articleId;
+    private int typeId;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,13 +24,13 @@ public class PureArticleTypeJoinEntity {
     }
 
     @Basic
-    @Column(name = "type_id")
-    public int getTypeId() {
-        return typeId;
+    @Column(name = "add_time")
+    public int getAddTime() {
+        return addTime;
     }
 
-    public void setTypeId(int typeId) {
-        this.typeId = typeId;
+    public void setAddTime(int addTime) {
+        this.addTime = addTime;
     }
 
     @Basic
@@ -43,13 +44,13 @@ public class PureArticleTypeJoinEntity {
     }
 
     @Basic
-    @Column(name = "add_time")
-    public int getAddTime() {
-        return addTime;
+    @Column(name = "type_id")
+    public int getTypeId() {
+        return typeId;
     }
 
-    public void setAddTime(int addTime) {
-        this.addTime = addTime;
+    public void setTypeId(int typeId) {
+        this.typeId = typeId;
     }
 
     @Override
@@ -58,13 +59,13 @@ public class PureArticleTypeJoinEntity {
         if (o == null || getClass() != o.getClass()) return false;
         PureArticleTypeJoinEntity that = (PureArticleTypeJoinEntity) o;
         return id == that.id &&
-                typeId == that.typeId &&
+                addTime == that.addTime &&
                 articleId == that.articleId &&
-                addTime == that.addTime;
+                typeId == that.typeId;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, typeId, articleId, addTime);
+        return Objects.hash(id, addTime, articleId, typeId);
     }
 }

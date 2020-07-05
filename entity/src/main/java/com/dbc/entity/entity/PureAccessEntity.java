@@ -8,13 +8,13 @@ import java.util.Objects;
 @Table(name = "pure_access", schema = "pure", catalog = "")
 public class PureAccessEntity implements Serializable {
     private int id;
-    private String path;
     private int addTime;
-    private int sort;
-    private int parentId;
     private String description;
+    private int sort;
+    private String access;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -22,16 +22,6 @@ public class PureAccessEntity implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name = "path")
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
     }
 
     @Basic
@@ -45,6 +35,16 @@ public class PureAccessEntity implements Serializable {
     }
 
     @Basic
+    @Column(name = "description")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Basic
     @Column(name = "sort")
     public int getSort() {
         return sort;
@@ -55,23 +55,13 @@ public class PureAccessEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "parent_id")
-    public int getParentId() {
-        return parentId;
+    @Column(name = "access")
+    public String getAccess() {
+        return access;
     }
 
-    public void setParentId(int parentId) {
-        this.parentId = parentId;
-    }
-
-    @Basic
-    @Column(name = "description")
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setAccess(String access) {
+        this.access = access;
     }
 
     @Override
@@ -82,13 +72,12 @@ public class PureAccessEntity implements Serializable {
         return id == that.id &&
                 addTime == that.addTime &&
                 sort == that.sort &&
-                parentId == that.parentId &&
-                Objects.equals(path, that.path) &&
-                Objects.equals(description, that.description);
+                Objects.equals(description, that.description) &&
+                Objects.equals(access, that.access);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, path, addTime, sort, parentId, description);
+        return Objects.hash(id, addTime, description, sort, access);
     }
 }

@@ -8,11 +8,12 @@ import java.util.Objects;
 @Table(name = "pure_log", schema = "pure", catalog = "")
 public class PureLogEntity implements Serializable {
     private int id;
-    private String description;
     private int addTime;
+    private String description;
     private int userId;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -23,16 +24,6 @@ public class PureLogEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "description")
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Basic
     @Column(name = "add_time")
     public int getAddTime() {
         return addTime;
@@ -40,6 +31,16 @@ public class PureLogEntity implements Serializable {
 
     public void setAddTime(int addTime) {
         this.addTime = addTime;
+    }
+
+    @Basic
+    @Column(name = "description")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Basic
@@ -65,6 +66,6 @@ public class PureLogEntity implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, description, addTime, userId);
+        return Objects.hash(id, addTime, description, userId);
     }
 }

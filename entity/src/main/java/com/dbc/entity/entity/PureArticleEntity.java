@@ -9,21 +9,21 @@ import java.util.Objects;
 public class PureArticleEntity implements Serializable {
     private int id;
     private int addTime;
+    private String articleFlag;
     private int commentNum;
     private String content;
     private int modifyTime;
     private int pickNum;
+    private int publishTime;
     private int readNum;
-    private byte status;
+    private short status;
     private String subTitle;
+    private String summary;
     private String title;
     private int userId;
-    private String summary;
-    private String articleFlag;
-    private int publishTime;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //这样才能返回数据库中的自增ID
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -41,6 +41,16 @@ public class PureArticleEntity implements Serializable {
 
     public void setAddTime(int addTime) {
         this.addTime = addTime;
+    }
+
+    @Basic
+    @Column(name = "article_flag")
+    public String getArticleFlag() {
+        return articleFlag;
+    }
+
+    public void setArticleFlag(String articleFlag) {
+        this.articleFlag = articleFlag;
     }
 
     @Basic
@@ -84,6 +94,16 @@ public class PureArticleEntity implements Serializable {
     }
 
     @Basic
+    @Column(name = "publish_time")
+    public int getPublishTime() {
+        return publishTime;
+    }
+
+    public void setPublishTime(int publishTime) {
+        this.publishTime = publishTime;
+    }
+
+    @Basic
     @Column(name = "read_num")
     public int getReadNum() {
         return readNum;
@@ -95,11 +115,11 @@ public class PureArticleEntity implements Serializable {
 
     @Basic
     @Column(name = "status")
-    public byte getStatus() {
+    public short getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(short status) {
         this.status = status;
     }
 
@@ -111,6 +131,16 @@ public class PureArticleEntity implements Serializable {
 
     public void setSubTitle(String subTitle) {
         this.subTitle = subTitle;
+    }
+
+    @Basic
+    @Column(name = "summary")
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
     }
 
     @Basic
@@ -133,16 +163,6 @@ public class PureArticleEntity implements Serializable {
         this.userId = userId;
     }
 
-    @Basic
-    @Column(name = "summary")
-    public String getSummary() {
-        return summary;
-    }
-
-    public void setSummary(String summary) {
-        this.summary = summary;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -153,57 +173,19 @@ public class PureArticleEntity implements Serializable {
                 commentNum == that.commentNum &&
                 modifyTime == that.modifyTime &&
                 pickNum == that.pickNum &&
+                publishTime == that.publishTime &&
                 readNum == that.readNum &&
                 status == that.status &&
                 userId == that.userId &&
+                Objects.equals(articleFlag, that.articleFlag) &&
                 Objects.equals(content, that.content) &&
                 Objects.equals(subTitle, that.subTitle) &&
-                Objects.equals(title, that.title) &&
-                Objects.equals(summary, that.summary);
+                Objects.equals(summary, that.summary) &&
+                Objects.equals(title, that.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, addTime, commentNum, content, modifyTime, pickNum, readNum, status, subTitle, title, userId, summary);
-    }
-
-    @Basic
-    @Column(name = "article_flag")
-    public String getArticleFlag() {
-        return articleFlag;
-    }
-
-    public void setArticleFlag(String articleFlag) {
-        this.articleFlag = articleFlag;
-    }
-
-    @Basic
-    @Column(name = "publish_time")
-    public int getPublishTime() {
-        return publishTime;
-    }
-
-    public void setPublishTime(int publishTime) {
-        this.publishTime = publishTime;
-    }
-
-    @Override
-    public String toString() {
-        return "PureArticleEntity{" +
-                "id=" + id +
-                ", addTime=" + addTime +
-                ", commentNum=" + commentNum +
-                ", content='" + content + '\'' +
-                ", modifyTime=" + modifyTime +
-                ", pickNum=" + pickNum +
-                ", readNum=" + readNum +
-                ", status=" + status +
-                ", subTitle='" + subTitle + '\'' +
-                ", title='" + title + '\'' +
-                ", userId=" + userId +
-                ", summary='" + summary + '\'' +
-                ", articleFlag='" + articleFlag + '\'' +
-                ", publishTime=" + publishTime +
-                '}';
+        return Objects.hash(id, addTime, articleFlag, commentNum, content, modifyTime, pickNum, publishTime, readNum, status, subTitle, summary, title, userId);
     }
 }
