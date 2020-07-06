@@ -12,6 +12,7 @@ public class PureAccessEntity implements Serializable {
     private String description;
     private int sort;
     private String access;
+    private boolean status;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -62,6 +63,16 @@ public class PureAccessEntity implements Serializable {
 
     public void setAccess(String access) {
         this.access = access;
+    }
+
+    @Basic
+    @Column(name = "status")
+    public boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     @Override

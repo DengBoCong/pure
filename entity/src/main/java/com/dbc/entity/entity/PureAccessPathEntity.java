@@ -11,8 +11,9 @@ public class PureAccessPathEntity implements Serializable {
     private String accessPath;
     private int addTime;
     private short sort;
-    private int accessId;
+    private String access;
     private String description;
+    private boolean status;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,13 +57,13 @@ public class PureAccessPathEntity implements Serializable {
     }
 
     @Basic
-    @Column(name = "access_id")
-    public int getAccessId() {
-        return accessId;
+    @Column(name = "access")
+    public String getAccess() {
+        return access;
     }
 
-    public void setAccessId(int accessId) {
-        this.accessId = accessId;
+    public void setAccess(String access) {
+        this.access = access;
     }
 
     @Basic
@@ -75,6 +76,16 @@ public class PureAccessPathEntity implements Serializable {
         this.description = description;
     }
 
+    @Basic
+    @Column(name = "status")
+    public boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -83,13 +94,13 @@ public class PureAccessPathEntity implements Serializable {
         return id == that.id &&
                 addTime == that.addTime &&
                 sort == that.sort &&
-                accessId == that.accessId &&
+                access == that.access &&
                 Objects.equals(accessPath, that.accessPath) &&
                 Objects.equals(description, that.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, accessPath, addTime, sort, accessId, description);
+        return Objects.hash(id, accessPath, addTime, sort, access, description);
     }
 }
