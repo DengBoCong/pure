@@ -122,6 +122,12 @@
             <version>2.9.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.72</version>
+        </dependency>
+
 <!--   spring security 依赖     -->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
