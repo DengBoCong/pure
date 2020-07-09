@@ -16,6 +16,11 @@ public class AccessServiceImpl implements AccessService {
 
     @Override
     public List<PureAccessPathEntity> findPathByAccess(String access) {
-        return accessPathRepository.findAllByAccess(access);
+        return accessPathRepository.findAllByAccessLessThanEqual(access);
+    }
+
+    @Override
+    public PureAccessPathEntity findAccessByPath(String path) {
+        return accessPathRepository.findByAccessPath(path);
     }
 }

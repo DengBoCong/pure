@@ -14,6 +14,11 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
+    public PureUserEntity findByAccount(String account) {
+        return userRepository.findByAccount(account);
+    }
+
+    @Override
     public List<PureUserEntity> findByAccess(String access) {
         return userRepository.findAllByAccess(access);
     }

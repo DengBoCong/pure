@@ -28,13 +28,22 @@ public class UserApi {
 
     @ApiOperation(value = "通过账户、密码、平台等相关信息进行登录")
     @PostMapping("/login")
+    @ApiResponses(value = {
+            @ApiResponse(code = 0, message = "查询成功"),
+            @ApiResponse(code = 1, message = "数据查询出现异常"),
+            @ApiResponse(code = 3, message = "数据为空")
+    })
     public BaseResult<PureUserEntity> login(@RequestBody String data) {
         JSONObject jsonObject = JSONObject.parseObject(data);
-
-        System.out.println(jsonObject.get("platform"));
-        System.out.println(jsonObject.get("account"));
-        System.out.println(jsonObject.get("password"));
-        return BaseResult.success();
+        PureUserEntity userEntity = null;
+        try {
+            userEntity = userService.findByAccount(jsonObject.get("account").toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return BaseResult.failWithCodeAndMsg(1, "数据查询出现异常");
+        }
+        if (userEntity == null) return BaseResult.isNull();
+        return BaseResult.successWithData(userEntity);
     }
 
     @PostMapping("/oneInsert")
@@ -59,6 +68,22 @@ public class UserApi {
         }
         if (list == null) return BaseResult.isNull();
         else return BaseResult.successWithData(list);
+    }
+
+    @PostMapping("/checkAccess")
+    public BaseResult checkAccess(String access, String path) {
+        PureAccessPathEntity accessPathEntity = null;
+        try {
+            accessPathEntity = accessService.findAccessByPath(path);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return BaseResult.failWithCodeAndMsg(1, "服务器出现异常");
+        }
+        if (accessPathEntity == null) return BaseResult.failWithCodeAndMsg(2, "账号未授权");
+
+        if (accessPathEntity.getAccess().compareTo(access) > 0)
+            return BaseResult.failWithCodeAndMsg(2, "账号未授权");
+        else return BaseResult.success();
     }
 
     @ApiOperation(value = "直接查询最高等级用户信息")

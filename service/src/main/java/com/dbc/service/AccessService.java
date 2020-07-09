@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface AccessService {
     public List<PureAccessPathEntity> findPathByAccess(String access);
+    public PureAccessPathEntity findAccessByPath(String path);
 }

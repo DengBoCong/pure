@@ -8,5 +8,6 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<PureUserEntity, Integer> {
+    public PureUserEntity findByAccount(String account);
     public List<PureUserEntity> findAllByAccess(String access);
 }
