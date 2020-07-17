@@ -50,7 +50,7 @@ public class ArticleTypeApi {
     }
 
     @ApiOperation(value = "文章分类专栏添加以及更新接口")
-    @PostMapping("/oneInsertAndUpdate")
+    @PutMapping("/oneInsertAndUpdate")
     @ApiResponses(value = {
             @ApiResponse(code = 0, message = "成功"),
             @ApiResponse(code = 1, message = "失败"),
@@ -84,7 +84,7 @@ public class ArticleTypeApi {
     }
 
     @ApiOperation(value = "根据转过来的ID删除文章分类专栏")
-    @PostMapping("/oneDelete")
+    @DeleteMapping("/oneDelete")
     @ApiResponses(value = {
             @ApiResponse(code = 0, message = "删除成功"),
             @ApiResponse(code = 1, message = "删除出现异常")

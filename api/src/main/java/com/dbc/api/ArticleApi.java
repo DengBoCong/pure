@@ -53,7 +53,7 @@ public class ArticleApi {
     }
 
     @ApiOperation(value = "通过文章ID进行查询")
-    @PostMapping("/findByArticleId")
+    @GetMapping("/findByArticleId")
     @ApiResponse(code = 0, message = "查询成功")
     public BaseResult<ArticleAddModel> findArticleByArticleId(int articleId) {
         ArticleAddModel articleAddModel = new ArticleAddModel();
@@ -63,7 +63,7 @@ public class ArticleApi {
     }
 
     @ApiOperation(value = "通过文章相关信息进行添加文章接口")
-    @PostMapping("/oneInsert")
+    @PutMapping("/oneInsert")
     @ApiResponse(code = 0, message = "添加成功")
     public BaseResult<PureArticleEntity> oneInsert(@RequestBody ArticleAddModel articleModel) {
         PureArticleEntity articleEntity = articleService.addOneEntity(articleModel.getArticleEntity());
