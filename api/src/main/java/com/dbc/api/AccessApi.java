@@ -7,9 +7,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,5 +32,19 @@ public class AccessApi {
         }
         if (list == null) return BaseResult.isNull();
         else return BaseResult.successWithData(list);
+    }
+
+    @ApiOperation(value = "直接查询所有访问权限路径，默认sort排序")
+    @GetMapping("/findAllOrderBySort")
+    @ApiResponse(code = 0, message = "查询成功")
+    public BaseResult<List<PureAccessPathEntity>> findAllOrderBySort() {
+        return BaseResult.successWithData(accessService.findAllOrderBySort());
+    }
+
+    @ApiOperation(value = "对单个实体进行插入和更新")
+    @PutMapping("/oneInsertUpdate")
+    @ApiResponse(code = 0, message = "添加或更新成功")
+    public BaseResult<PureAccessPathEntity> insertAndUpdate(@RequestBody PureAccessPathEntity accessPathEntity) {
+        return BaseResult.successWithData(accessService.addOneEntity(accessPathEntity));
     }
 }

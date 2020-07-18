@@ -10,4 +10,6 @@ import java.util.List;
 public interface AccessPathRepository extends JpaRepository<PureAccessPathEntity, Integer> {
     public List<PureAccessPathEntity> findAllByAccessLessThanEqual(String access);
     public PureAccessPathEntity findByAccessPath(String path);
+    public List<PureAccessPathEntity> findAllByOrderBySort();
+    public PureAccessPathEntity findById(int id);
 }

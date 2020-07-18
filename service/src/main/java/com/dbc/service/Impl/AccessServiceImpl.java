@@ -15,6 +15,11 @@ public class AccessServiceImpl implements AccessService {
     private AccessPathRepository accessPathRepository;
 
     @Override
+    public List<PureAccessPathEntity> findAllOrderBySort() {
+        return accessPathRepository.findAllByOrderBySort();
+    }
+
+    @Override
     public List<PureAccessPathEntity> findPathByAccess(String access) {
         return accessPathRepository.findAllByAccessLessThanEqual(access);
     }
@@ -22,5 +27,25 @@ public class AccessServiceImpl implements AccessService {
     @Override
     public PureAccessPathEntity findAccessByPath(String path) {
         return accessPathRepository.findByAccessPath(path);
+    }
+
+    @Override
+    public PureAccessPathEntity addOneEntity(PureAccessPathEntity accessPathEntity) {
+        if (accessPathEntity.getId() == 0) {
+            return accessPathRepository.save(accessPathEntity);
+        } else {
+            PureAccessPathEntity accessPathEntity1 = null;
+            accessPathEntity1 = accessPathRepository.findById(accessPathEntity.getId());
+            if (accessPathEntity.getStatus() != accessPathEntity1.getStatus()) {
+                accessPathEntity1.setStatus(accessPathEntity.getStatus());
+            }
+            if (accessPathEntity.getAccess() != null) {
+                accessPathEntity1.setAccess(accessPathEntity.getAccess());
+            }
+            if (accessPathEntity.getDescription() != null) {
+                accessPathEntity1.setDescription(accessPathEntity.getDescription());
+            }
+            return accessPathRepository.save(accessPathEntity1);
+        }
     }
 }
