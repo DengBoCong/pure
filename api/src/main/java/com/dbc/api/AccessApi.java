@@ -47,4 +47,14 @@ public class AccessApi {
     public BaseResult<PureAccessPathEntity> insertAndUpdate(@RequestBody PureAccessPathEntity accessPathEntity) {
         return BaseResult.successWithData(accessService.addOneEntity(accessPathEntity));
     }
+
+    @ApiOperation(value = "批量添加用户访问地址，默认权限为SUPER")
+    @PutMapping("/manyInsert")
+    @ApiResponses(value = {
+            @ApiResponse(code = 0, message = "批量添加成功")
+    })
+    public BaseResult<List<PureAccessPathEntity>> manyInsert(@RequestBody List<PureAccessPathEntity> list) {
+        System.out.println(list.toArray().toString());
+        return BaseResult.success();
+    }
 }
