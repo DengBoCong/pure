@@ -51,10 +51,19 @@ public class AccessApi {
     @ApiOperation(value = "批量添加用户访问地址，默认权限为SUPER")
     @PutMapping("/manyInsert")
     @ApiResponses(value = {
-            @ApiResponse(code = 0, message = "批量添加成功")
+            @ApiResponse(code = 0, message = "批量添加成功"),
+            @ApiResponse(code = 1, message = "服务器响应出错"),
+            @ApiResponse(code = 3, message = "数据量为空")
     })
     public BaseResult<List<PureAccessPathEntity>> manyInsert(@RequestBody List<PureAccessPathEntity> list) {
-        System.out.println(list.toArray().toString());
-        return BaseResult.success();
+        List<PureAccessPathEntity> list1 = null;
+        try {
+            list1 = accessService.addManyEntity(list);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return BaseResult.failWithCodeAndMsg(1, "服务器响应出错");
+        }
+        if (list1 == null) return BaseResult.isNull();
+        return BaseResult.successWithData(list1);
     }
 }

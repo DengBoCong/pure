@@ -9,4 +9,5 @@ public interface AccessService {
     public List<PureAccessPathEntity> findPathByAccess(String access);
     public PureAccessPathEntity findAccessByPath(String path);
     public PureAccessPathEntity addOneEntity(PureAccessPathEntity accessPathEntity);
+    public List<PureAccessPathEntity> addManyEntity(List<PureAccessPathEntity> list);
 }

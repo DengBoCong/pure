@@ -7,7 +7,10 @@ import com.dbc.service.AccessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service("accessService")
 public class AccessServiceImpl implements AccessService {
@@ -47,5 +50,27 @@ public class AccessServiceImpl implements AccessService {
             }
             return accessPathRepository.save(accessPathEntity1);
         }
+    }
+
+    @Override
+    public List<PureAccessPathEntity> addManyEntity(List<PureAccessPathEntity> list) {
+        Map map = new HashMap();
+        List<PureAccessPathEntity> dataBase = accessPathRepository.findAllByOrderBySort();
+        for (PureAccessPathEntity accessPathEntity : dataBase) {
+            map.put(accessPathEntity.getAccessPath(), accessPathEntity.getDescription());
+        }
+
+        PureAccessPathEntity pathEntity = null;
+        List<PureAccessPathEntity> result = new ArrayList<>();
+        for (PureAccessPathEntity accessPathEntity : list) {
+            if (!map.containsKey(accessPathEntity.getAccessPath())) {
+                pathEntity = new PureAccessPathEntity();
+                pathEntity.setAccessPath(accessPathEntity.getAccessPath());
+                pathEntity.setDescription(accessPathEntity.getDescription());
+                result.add(pathEntity);
+            }
+        }
+
+        return accessPathRepository.saveAll(result);
     }
 }
