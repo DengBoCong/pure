@@ -12,4 +12,5 @@ public interface AccessPathRepository extends JpaRepository<PureAccessPathEntity
     public PureAccessPathEntity findByAccessPath(String path);
     public List<PureAccessPathEntity> findAllByOrderBySort();
     public PureAccessPathEntity findById(int id);
+    public PureAccessPathEntity deleteById(int id);
 }

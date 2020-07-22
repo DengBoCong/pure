@@ -10,4 +10,5 @@ public interface AccessService {
     public PureAccessPathEntity findAccessByPath(String path);
     public PureAccessPathEntity addOneEntity(PureAccessPathEntity accessPathEntity);
     public List<PureAccessPathEntity> addManyEntity(List<PureAccessPathEntity> list);
+    public PureAccessPathEntity deleteOneEntity(int id);
 }

@@ -66,4 +66,20 @@ public class AccessApi {
         if (list1 == null) return BaseResult.isNull();
         return BaseResult.successWithData(list1);
     }
+
+    @ApiOperation(value = "通过id删除单个用户访问权限")
+    @DeleteMapping("/deleteOneById")
+    @ApiResponses(value = {
+            @ApiResponse(code = 0, message = "删除成功"),
+            @ApiResponse(code = 1, message = "服务器响应出错"),
+    })
+    public BaseResult<List<PureAccessPathEntity>> deleteOneById(int id) {
+        try {
+            accessService.deleteOneEntity(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return BaseResult.failWithCodeAndMsg(1, "服务器响应出错");
+        }
+        return BaseResult.successWithData(accessService.findAllOrderBySort());
+    }
 }

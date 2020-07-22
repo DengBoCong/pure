@@ -73,4 +73,9 @@ public class AccessServiceImpl implements AccessService {
 
         return accessPathRepository.saveAll(result);
     }
+
+    @Override
+    public PureAccessPathEntity deleteOneEntity(int id) {
+        return accessPathRepository.deleteById(id);
+    }
 }
