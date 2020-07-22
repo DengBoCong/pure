@@ -14,7 +14,7 @@ public class NoticeServiceImpl implements NoticeService {
     private NoticeRepository noticeRepository;
 
     @Override
-    public PureNoticeEntity findByType(String type) {
-        return noticeRepository.findByType(type);
+    public PureNoticeEntity findByTypeAndStatus(String type, short status) {
+        return noticeRepository.findByTypeAndStatus(type, status);
     }
 }

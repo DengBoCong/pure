@@ -17,6 +17,7 @@ public class PureNoticeEntity implements Serializable {
     private String titleColor;
     private String type;
     private String url;
+    private String description;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,6 +66,10 @@ public class PureNoticeEntity implements Serializable {
         return sort;
     }
 
+    public void setSort(byte sort) {
+        this.sort = sort;
+    }
+
     public void setSort(short sort) {
         this.sort = sort;
     }
@@ -73,6 +78,10 @@ public class PureNoticeEntity implements Serializable {
     @Column(name = "status")
     public short getStatus() {
         return status;
+    }
+
+    public void setStatus(byte status) {
+        this.status = status;
     }
 
     public void setStatus(short status) {
@@ -119,6 +128,16 @@ public class PureNoticeEntity implements Serializable {
         this.url = url;
     }
 
+    @Basic
+    @Column(name = "description")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -133,11 +152,12 @@ public class PureNoticeEntity implements Serializable {
                 Objects.equals(title, that.title) &&
                 Objects.equals(titleColor, that.titleColor) &&
                 Objects.equals(type, that.type) &&
-                Objects.equals(url, that.url);
+                Objects.equals(url, that.url) &&
+                Objects.equals(description, that.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, addTime, content, contentColor, sort, status, title, titleColor, type, url);
+        return Objects.hash(id, addTime, content, contentColor, sort, status, title, titleColor, type, url, description);
     }
 }

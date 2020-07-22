@@ -5,5 +5,5 @@ import com.dbc.entity.entity.PureNoticeEntity;
 import java.util.List;
 
 public interface NoticeService {
-    public PureNoticeEntity findByType(String type);
+    public PureNoticeEntity findByTypeAndStatus(String type, short status);
 }
