@@ -44,10 +44,10 @@ public class AccessServiceImpl implements AccessService {
             if (accessPathEntity.getStatus() != accessPathEntity1.getStatus()) {
                 accessPathEntity1.setStatus(accessPathEntity.getStatus());
             }
-            if (accessPathEntity.getAccess() != null) {
+            if (!accessPathEntity.getAccess().equals("")) {
                 accessPathEntity1.setAccess(accessPathEntity.getAccess());
             }
-            if (accessPathEntity.getDescription() != null) {
+            if (!accessPathEntity.getDescription().equals("")) {
                 accessPathEntity1.setDescription(accessPathEntity.getDescription());
             }
             return accessPathRepository.save(accessPathEntity1);
