@@ -8,11 +8,11 @@ import java.util.Objects;
 @Table(name = "pure_access_path", schema = "pure", catalog = "")
 public class PureAccessPathEntity implements Serializable {
     private int id;
-    private String accessPath = "default";
+    private String accessPath = "";
     private int addTime = 0;
     private short sort = 0;
-    private String access = "default";
-    private String description = "default";
+    private String access = "";
+    private String description = "";
     private boolean status = false;
 
     @Id

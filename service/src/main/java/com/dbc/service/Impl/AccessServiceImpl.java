@@ -4,6 +4,7 @@ import com.dbc.dao.AccessPathRepository;
 import com.dbc.dao.AccessRepository;
 import com.dbc.entity.entity.PureAccessPathEntity;
 import com.dbc.service.AccessService;
+import com.dbc.service.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +36,7 @@ public class AccessServiceImpl implements AccessService {
     @Override
     public PureAccessPathEntity addOneEntity(PureAccessPathEntity accessPathEntity) {
         if (accessPathEntity.getId() == 0) {
+            accessPathEntity.setAddTime(DateUtils.NewDateInt());
             return accessPathRepository.save(accessPathEntity);
         } else {
             PureAccessPathEntity accessPathEntity1 = null;
@@ -65,6 +67,7 @@ public class AccessServiceImpl implements AccessService {
         for (PureAccessPathEntity accessPathEntity : list) {
             if (!map.containsKey(accessPathEntity.getAccessPath())) {
                 pathEntity = new PureAccessPathEntity();
+                pathEntity.setAddTime(DateUtils.NewDateInt());
                 pathEntity.setAccessPath(accessPathEntity.getAccessPath());
                 pathEntity.setDescription(accessPathEntity.getDescription());
                 result.add(pathEntity);

@@ -16,6 +16,7 @@ public class PureAdvertiseEntity implements Serializable {
     private String title;
     private String type;
     private String url;
+    private int reserveTime;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -64,6 +65,10 @@ public class PureAdvertiseEntity implements Serializable {
         return sort;
     }
 
+    public void setSort(byte sort) {
+        this.sort = sort;
+    }
+
     public void setSort(short sort) {
         this.sort = sort;
     }
@@ -72,6 +77,10 @@ public class PureAdvertiseEntity implements Serializable {
     @Column(name = "status")
     public short getStatus() {
         return status;
+    }
+
+    public void setStatus(byte status) {
+        this.status = status;
     }
 
     public void setStatus(short status) {
@@ -108,6 +117,16 @@ public class PureAdvertiseEntity implements Serializable {
         this.url = url;
     }
 
+    @Basic
+    @Column(name = "reserve_time")
+    public int getReserveTime() {
+        return reserveTime;
+    }
+
+    public void setReserveTime(int reserveTime) {
+        this.reserveTime = reserveTime;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -121,11 +140,12 @@ public class PureAdvertiseEntity implements Serializable {
                 Objects.equals(description, that.description) &&
                 Objects.equals(title, that.title) &&
                 Objects.equals(type, that.type) &&
-                Objects.equals(url, that.url);
+                Objects.equals(url, that.url) &&
+                Objects.equals(reserveTime, that.reserveTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, addTime, cover, description, sort, status, title, type, url);
+        return Objects.hash(id, addTime, cover, description, sort, status, title, type, url, reserveTime);
     }
 }

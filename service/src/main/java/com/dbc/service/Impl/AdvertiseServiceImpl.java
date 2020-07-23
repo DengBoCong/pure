@@ -14,7 +14,7 @@ public class AdvertiseServiceImpl implements AdvertiseService {
     private AdvertiseRepository advertiseRepository;
 
     @Override
-    public List<PureAdvertiseEntity> findAllByType(String type) {
-        return advertiseRepository.findAllByType(type);
+    public List<PureAdvertiseEntity> findAllByTypeAndStatus(String type, short status) {
+        return advertiseRepository.findAllByTypeAndStatus(type, status);
     }
 }

@@ -1,4 +1,4 @@
-package com.dbc.utils;
+package com.dbc.service.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +8,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
-import java.util.Random;
 
 public class DateUtils {
     private static Logger logger = LoggerFactory.getLogger(DateUtils.class);

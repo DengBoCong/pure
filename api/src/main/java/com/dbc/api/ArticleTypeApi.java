@@ -3,7 +3,7 @@ package com.dbc.api;
 import com.dbc.entity.entity.PureArticleTypeEntity;
 import com.dbc.service.ArticleTypeService;
 import com.dbc.utils.BaseResult;
-import com.dbc.utils.DateUtils;
+import com.dbc.service.utils.DateUtils;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
