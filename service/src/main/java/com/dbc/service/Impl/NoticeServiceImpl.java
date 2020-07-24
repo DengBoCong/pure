@@ -22,4 +22,9 @@ public class NoticeServiceImpl implements NoticeService {
     public List<PureNoticeEntity> findAllByOrderByType() {
         return noticeRepository.findAllByOrderByType();
     }
+
+    @Override
+    public PureNoticeEntity deleteOneById(int id) {
+        return noticeRepository.deleteById(id);
+    }
 }

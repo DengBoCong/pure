@@ -10,4 +10,5 @@ import java.util.List;
 public interface NoticeRepository extends JpaRepository<PureNoticeEntity, Integer> {
     public List<PureNoticeEntity> findAllByOrderByType();
     public PureNoticeEntity findByTypeAndStatus(String type, short status);
+    public PureNoticeEntity deleteById(int id);
 }

@@ -7,4 +7,5 @@ import java.util.List;
 public interface NoticeService {
     public List<PureNoticeEntity> findAllByOrderByType();
     public PureNoticeEntity findByTypeAndStatus(String type, short status);
+    public PureNoticeEntity deleteOneById(int id);
 }

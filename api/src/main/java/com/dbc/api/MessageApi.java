@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,6 +48,22 @@ public class MessageApi {
     @GetMapping("/findAllNotice")
     @ApiResponse(code = 0, message = "查询成功返回查询数据")
     public BaseResult<List<PureNoticeEntity>> findAllNoticeSortByType() {
+        return BaseResult.successWithData(noticeService.findAllByOrderByType());
+    }
+
+    @ApiOperation(value = "通过id删除单个通告")
+    @DeleteMapping("/deleteOneById")
+    @ApiResponses(value = {
+            @ApiResponse(code = 0, message = "删除成功"),
+            @ApiResponse(code = 1, message = "服务器响应出错"),
+    })
+    public BaseResult<List<PureNoticeEntity>> deleteNoticeById(int id) {
+        try {
+            noticeService.deleteOneById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return BaseResult.failWithCodeAndMsg(1, "服务器响应出错");
+        }
         return BaseResult.successWithData(noticeService.findAllByOrderByType());
     }
 
