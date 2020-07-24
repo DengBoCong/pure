@@ -43,6 +43,13 @@ public class MessageApi {
         return BaseResult.successWithData(noticeEntity);
     }
 
+    @ApiOperation(value = "查询所有的通告，默认他通过类型标记排序")
+    @GetMapping("/findAllNotice")
+    @ApiResponse(code = 0, message = "查询成功返回查询数据")
+    public BaseResult<List<PureNoticeEntity>> findAllNoticeSortByType() {
+        return BaseResult.successWithData(noticeService.findAllByOrderByType());
+    }
+
     @ApiOperation(value = "通过广告的类型组进行查询，默认查询状态为1，即激活状态")
     @GetMapping("/findAdvertiseByType")
     @ApiResponses(value = {

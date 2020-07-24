@@ -17,4 +17,9 @@ public class NoticeServiceImpl implements NoticeService {
     public PureNoticeEntity findByTypeAndStatus(String type, short status) {
         return noticeRepository.findByTypeAndStatus(type, status);
     }
+
+    @Override
+    public List<PureNoticeEntity> findAllByOrderByType() {
+        return noticeRepository.findAllByOrderByType();
+    }
 }
