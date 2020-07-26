@@ -7,7 +7,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "pure_access_path", schema = "pure", catalog = "")
 public class PureAccessPathEntity implements Serializable {
-    private int id;
+    private int id = 0;
     private String accessPath = "";
     private int addTime = 0;
     private short sort = 0;

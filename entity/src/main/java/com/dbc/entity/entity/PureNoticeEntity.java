@@ -7,18 +7,18 @@ import java.util.Objects;
 @Entity
 @Table(name = "pure_notice", schema = "pure", catalog = "")
 public class PureNoticeEntity implements Serializable {
-    private int id;
-    private int addTime;
-    private String content;
-    private String contentColor;
-    private short sort;
-    private short status;
-    private String title;
-    private String titleColor;
-    private String type;
-    private String url;
-    private String description;
-    private int reserveTime;
+    private int id = 0;
+    private int addTime = 0;
+    private String content = "";
+    private String contentColor = "";
+    private short sort = 0;
+    private short status = 0;
+    private String title = "";
+    private String titleColor = "";
+    private String type = "";
+    private String url = "";
+    private String description = "";
+    private int reserveTime = 0;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -67,10 +67,6 @@ public class PureNoticeEntity implements Serializable {
         return sort;
     }
 
-    public void setSort(byte sort) {
-        this.sort = sort;
-    }
-
     public void setSort(short sort) {
         this.sort = sort;
     }
@@ -79,10 +75,6 @@ public class PureNoticeEntity implements Serializable {
     @Column(name = "status")
     public short getStatus() {
         return status;
-    }
-
-    public void setStatus(byte status) {
-        this.status = status;
     }
 
     public void setStatus(short status) {

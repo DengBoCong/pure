@@ -9,10 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -51,8 +48,25 @@ public class MessageApi {
         return BaseResult.successWithData(noticeService.findAllByOrderByType());
     }
 
+    @ApiOperation(value = "添加或更新单个通告接口")
+    @PutMapping("/addAndUpdateOneNotice")
+    @ApiResponses(value = {
+            @ApiResponse(code = 0, message = "添加成功，返回添加通告信息"),
+            @ApiResponse(code = 3, message = "服务器出现错误"),
+    })
+    public BaseResult<List<PureNoticeEntity>> addAndUpdateOneNotice(@RequestBody PureNoticeEntity noticeEntity) {
+        PureNoticeEntity pureNoticeEntity = null;
+        try {
+            pureNoticeEntity = noticeService.addAndUpdateOne(noticeEntity);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return BaseResult.failWithCodeAndMsg(3, "服务器出现错误");
+        }
+        return BaseResult.successWithData(noticeService.findAllByOrderByType());
+    }
+
     @ApiOperation(value = "通过id删除单个通告")
-    @DeleteMapping("/deleteOneById")
+    @DeleteMapping("/deleteOneNoticeById")
     @ApiResponses(value = {
             @ApiResponse(code = 0, message = "删除成功"),
             @ApiResponse(code = 1, message = "服务器响应出错"),
