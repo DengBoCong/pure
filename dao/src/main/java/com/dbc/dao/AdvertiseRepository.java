@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface AdvertiseRepository extends JpaRepository<PureAdvertiseEntity, Integer> {
     public List<PureAdvertiseEntity> findAllByTypeAndStatus(String type, short status);
+    public List<PureAdvertiseEntity> findAllByOrderByType();
 }

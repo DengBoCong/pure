@@ -17,4 +17,9 @@ public class AdvertiseServiceImpl implements AdvertiseService {
     public List<PureAdvertiseEntity> findAllByTypeAndStatus(String type, short status) {
         return advertiseRepository.findAllByTypeAndStatus(type, status);
     }
+
+    @Override
+    public List<PureAdvertiseEntity> findAllByOrderByType() {
+        return advertiseRepository.findAllByOrderByType();
+    }
 }

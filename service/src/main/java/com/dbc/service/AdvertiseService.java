@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface AdvertiseService {
     public List<PureAdvertiseEntity> findAllByTypeAndStatus(String type, short status);
+    public List<PureAdvertiseEntity> findAllByOrderByType();
 }

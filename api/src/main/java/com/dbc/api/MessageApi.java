@@ -58,7 +58,7 @@ public class MessageApi {
         PureNoticeEntity pureNoticeEntity = null;
         try {
             pureNoticeEntity = noticeService.addAndUpdateOne(noticeEntity);
-        } catch (Exception e) {
+        } catch (Exception e) { 
             e.printStackTrace();
             return BaseResult.failWithCodeAndMsg(3, "服务器出现错误");
         }
@@ -98,5 +98,12 @@ public class MessageApi {
         }
         if (list.isEmpty()) return BaseResult.isNull();
         return BaseResult.successWithData(list);
+    }
+
+    @ApiOperation(value = "查询所有广告信息，默认type排序")
+    @GetMapping("/findAllAdvertise")
+    @ApiResponse(code = 0, message = "查询成功")
+    public BaseResult<List<PureAdvertiseEntity>> findAllAdvertiseSortByType() {
+        return BaseResult.successWithData(advertiseService.findAllByOrderByType());
     }
 }
