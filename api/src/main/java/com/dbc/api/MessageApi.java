@@ -106,4 +106,37 @@ public class MessageApi {
     public BaseResult<List<PureAdvertiseEntity>> findAllAdvertiseSortByType() {
         return BaseResult.successWithData(advertiseService.findAllByOrderByType());
     }
+
+    @ApiOperation(value = "添加或更新单个广告接口")
+    @PutMapping("/addAndUpdateOneAdvertise")
+    @ApiResponses(value = {
+            @ApiResponse(code = 0, message = "添加成功，返回添加广告信息"),
+            @ApiResponse(code = 3, message = "服务器出现错误"),
+    })
+    public BaseResult<List<PureAdvertiseEntity>> addAndUpdateOneAdvertise(@RequestBody PureAdvertiseEntity advertiseEntity) {
+        PureAdvertiseEntity pureAdvertiseEntity = null;
+        try {
+            pureAdvertiseEntity = advertiseService.addAndUpdateOne(advertiseEntity);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return BaseResult.failWithCodeAndMsg(3, "服务器出现错误");
+        }
+        return BaseResult.successWithData(advertiseService.findAllByOrderByType());
+    }
+
+    @ApiOperation(value = "通过id删除单个广告")
+    @DeleteMapping("/deleteOneAdvertiseById")
+    @ApiResponses(value = {
+            @ApiResponse(code = 0, message = "删除成功"),
+            @ApiResponse(code = 1, message = "服务器响应出错"),
+    })
+    public BaseResult<List<PureAdvertiseEntity>> deleteAdvertiseById(int id) {
+        try {
+            advertiseService.deleteOneById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return BaseResult.failWithCodeAndMsg(1, "服务器响应出错");
+        }
+        return BaseResult.successWithData(advertiseService.findAllByOrderByType());
+    }
 }

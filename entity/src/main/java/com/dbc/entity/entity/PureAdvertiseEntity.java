@@ -7,16 +7,16 @@ import java.util.Objects;
 @Entity
 @Table(name = "pure_advertise", schema = "pure", catalog = "")
 public class PureAdvertiseEntity implements Serializable {
-    private int id;
-    private int addTime;
-    private String cover;
-    private String description;
-    private short sort;
-    private short status;
-    private String title;
-    private String type;
-    private String url;
-    private int reserveTime;
+    private int id = 0;
+    private int addTime = 0;
+    private String cover = "";
+    private String description = "";
+    private short sort = 0;
+    private short status = 0;
+    private String title = "";
+    private String type = "";
+    private String url = "";
+    private int reserveTime = 0;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,10 +65,6 @@ public class PureAdvertiseEntity implements Serializable {
         return sort;
     }
 
-    public void setSort(byte sort) {
-        this.sort = sort;
-    }
-
     public void setSort(short sort) {
         this.sort = sort;
     }
@@ -77,10 +73,6 @@ public class PureAdvertiseEntity implements Serializable {
     @Column(name = "status")
     public short getStatus() {
         return status;
-    }
-
-    public void setStatus(byte status) {
-        this.status = status;
     }
 
     public void setStatus(short status) {
