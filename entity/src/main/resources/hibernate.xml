@@ -24,6 +24,7 @@
       <mapping class="com.dbc.entity.entity.PureUserRecordEntity"/>
     <mapping class="com.dbc.entity.entity.PureUserRecordItemEntity"/>
       <mapping class="com.dbc.entity.entity.PureAccessPathEntity"/>
+      <mapping class="com.dbc.entity.entity.PureLanguageEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
