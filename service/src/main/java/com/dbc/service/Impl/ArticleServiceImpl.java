@@ -7,6 +7,7 @@ import com.dbc.entity.entity.PureArticleTypeEntity;
 import com.dbc.entity.entity.PureArticleTypeJoinEntity;
 import com.dbc.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -31,6 +32,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    @Cacheable(value = "pure-redis-cache1",key = "'ArticleListByType'+#typeId",condition = "#typeId!=0")
     public List<PureArticleEntity> findByTypeId(int typeId) {
         List<PureArticleTypeJoinEntity> list = articleTypeJoinRepository.findAllByTypeId(typeId);
         List<PureArticleEntity> resultList = new ArrayList<>();
