@@ -37,7 +37,6 @@ public class ArticleApi {
     @ApiOperation(value = "通过文章-分类连表的typeId查询文章，即同一类别的所有文章")
     @PostMapping("/findArticleByTypeId")
     @ApiResponse(code = 0, message = "查询成功")
-
     public BaseResult<List<ArticleAddModel>> findArticleByTypeId(int typeId) {
         ArticleAddModel articleAddModel = null;
         List<PureArticleEntity> list = articleService.findByTypeId(typeId);

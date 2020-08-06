@@ -7,20 +7,21 @@ import java.util.Objects;
 @Entity
 @Table(name = "pure_article", schema = "pure", catalog = "")
 public class PureArticleEntity implements Serializable {
-    private int id;
-    private int addTime;
-    private String articleFlag;
-    private int commentNum;
-    private String content;
-    private int modifyTime;
-    private int pickNum;
-    private int publishTime;
-    private int readNum;
-    private short status;
-    private String subTitle;
-    private String summary;
-    private String title;
-    private int userId;
+    private int id = 0;
+    private int addTime = 0;
+    private String articleFlag = "";
+    private int commentNum = 0;
+    private String content = "";
+    private int modifyTime = 0;
+    private int pickNum = 0;
+    private int publishTime = 0;
+    private int readNum = 0;
+    private short status = 0;
+    private String subTitle = "";
+    private String summary = "";
+    private String title = "";
+    private int userId = 0;
+    private String contentHtml = "";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -163,6 +164,16 @@ public class PureArticleEntity implements Serializable {
         this.userId = userId;
     }
 
+    @Basic
+    @Column(name = "content_html")
+    public String getContentHtml() {
+        return contentHtml;
+    }
+
+    public void setContentHtml(String contentHtml) {
+        this.contentHtml = contentHtml;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -179,6 +190,7 @@ public class PureArticleEntity implements Serializable {
                 userId == that.userId &&
                 Objects.equals(articleFlag, that.articleFlag) &&
                 Objects.equals(content, that.content) &&
+                Objects.equals(contentHtml, that.contentHtml) &&
                 Objects.equals(subTitle, that.subTitle) &&
                 Objects.equals(summary, that.summary) &&
                 Objects.equals(title, that.title);
@@ -186,6 +198,6 @@ public class PureArticleEntity implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, addTime, articleFlag, commentNum, content, modifyTime, pickNum, publishTime, readNum, status, subTitle, summary, title, userId);
+        return Objects.hash(id, addTime, articleFlag, commentNum, content, modifyTime, pickNum, publishTime, readNum, status, subTitle, summary, title, userId, contentHtml);
     }
 }
